@@ -1,0 +1,220 @@
+/*!Theme  Bootstrap v4.2.1 
+ *Template css Bootstrap v4.2.1 */
+ 
+
+body{margin:0px; padding:0px;font-family: 'Poppins', sans-serif; background:#f5f9fb;}
+.dashboard_wrapper .left-side-menu {
+	width: 250px !important;
+	z-index: 10;
+	/* background: linear-gradient(135deg,#8f75da 0,#727cf5 60%); */
+	bottom: 0;
+	position: fixed;
+	-webkit-transition: all .2s ease-out;
+	transition: all 1s ease-out;
+	top: 0;
+	background: linear-gradient(to top, #A5FECB, #20BDFF, #5433FF);
+	overflow:hidden;
+}
+.dashboard-logo {text-align: center;margin:8px 0 0 0;}
+.main-page {margin-left:250px;background:#fafbfe;height: 98vh;}
+.navbar_custom {
+	padding: 14px 20px 8px 10px;
+	width: 100%;
+	background: #fff;
+	float: left;
+	/* border-bottom: 1px #ddd solid; */
+	box-shadow: 2px 2px 20px #eee;
+}
+.image-pf img {height: 40px;width: 40px;}
+.float-right.mb-0.logout li h4 {font-size: 15px;letter-spacing: 2px;font-weight: normal;}
+.float-right.mb-0.logout .list-inline-item:not(:last-child) {margin-right: 20px;}
+.float-right.mb-0.logout .list-inline-item .fas.fa-sign-out-alt {float: left;margin: 6px 21px 0 0px;color: #513aff;}
+.left_mlist-block.mb-0 li a {font-size: 1;color: #fff; text-decoration:none;}
+.float-right.mb-0.logout .list-inline-item a {font-size: 15px;letter-spacing: 2px; text-decoration:none;}
+.left_mlist-block.mb-0 li {list-style: none;float: left;width: 100%;box-shadow: 1px 2px 3px #2;padding-left: 80px;padding-top: 17px;padding-bottom: 20px;}
+.left_mlist-block.mb-0 li span {float: left;margin-left: -37px;margin-top: 5px;font-size: 14px;}
+.left_mlist-block.mb-0 {padding: 0px;margin:0px 0;}
+.left_mlist-block.mb-0 li:hover {background: #fafbfe !important;cursor: pointer;}
+.left_mlist-block.mb-0 li.active {background: #fafbfe !important;cursor: pointer;color: #fff !important;}
+.left_mlist-block.mb-0 li.active a {color: #000;}
+.left_mlist-block.mb-0 li:hover a{color: #000;}
+.left_mlist-block.mb-0 li.active {background: #fafbfe !important;cursor: pointer;color: #fff !important;}
+.dashboard-logo a img {max-width: 70px;margin-top: 6px;margin-bottom: 9px;}
+.dashboard_midcontent  .dog_listing {width:100%;float: left;padding: 20px;border: none;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px 15px 0 0;border-radius: 5px;}
+.dashboard_wrapper .dashboard_midcontent  .my-profile {width:100% ;float: left;padding: 20px;border: none;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px;border-radius: 5px;min-height: 381px;}
+.dashboard_wrapper .dashboard_midcontent .mysetting {min-height: 323px;}
+.profile_page-content .profile_img img {height: 120px;width: 120px;box-shadow: 1px 1px 12px #ccc;border: 1px #ccc solid;float: left;}
+.pey_img img {width: 120px;height: 120px;box-shadow: 1px 1px 12px #ccc;border: 1px #ccc solid;}
+.my-profile h3 {font-size: 21px;letter-spacing: 2px;margin-bottom: 23px;}
+.profile_page-content .profile_img {float: left;margin-right: 23px;}
+.profile-tittle h4 {font-size: 17px;letter-spacing: 0px;margin-bottom: 0px;}
+.pf-change {font-size:13px;color: #5433FF;margin-left: 12px;}
+.profile_page-content .profile-tittle {float: left;margin-right: 32px;margin-top: 5px;width: 30%;text-align: left;}
+.profile-tittle p {margin-bottom: 7px;font-size: 14px;}
+.profile_page-content {width: 100%;float: left;}
+.profile_page-content .pet_list_inline li {text-align: center;list-style: none;display: inline-block;width: 30%;margin-right: 24px;}
+.dog_listing h3 {font-size: 21px;letter-spacing: 2px;margin-bottom: 23px;}
+.tiddles_title {float: left;width: 100%;border-radius: 4px;border-right: 2px #20BDFF dotted;padding: 3px 0;margin: 10px 0;}
+.tiddles_title p {margin-bottom: 8px;}
+.tiddles_title h5 {margin: 10px 0 8px 0;font-size: 19PX;}
+.form-group.custom-form select {width: 100%;height: 42px;padding: 5px;border: 1px #ddd solid;-webkit-appearance: none;-moz-appearance: none;border-radius: 3px;max-width: 232px;position:relative;}
+.form-group.custom-form::after {content: "\f078""";position: absolute;right: 134px;top: 11px;font-family: 'Font Awesome\ 5 Free';font-weight: 600;font-size: 12px;}
+.action_buttonbox {width: 100%;float: left;}
+.action_buttonbox .action-btnlists li {list-style: none;display: inline-block;width: 32%;text-align: center;}
+.action_buttonbox .action-btnlists li a {background: -webkit-linear-gradient(to left, #A5FECB, #20BDFF, #5433FF);
+width: 73%;float: left;border-radius: 3px;font-size: 21px;color: #000;letter-spacing: 2px;background: #A5FECB;/* opacity: 0.8; */text-decoration: none;border: 1px #20BDFF solid;height: 62px;line-height: 57px;}
+.float-right .far {color: #5433FF;}
+.action-btnlists {text-align: center;}
+.dashboard_midcontent .action_buttonbox {-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 10px 30px;float: left;width: 97%;background: #fff;padding: 18px 0 0 0;}
+.foot_copyright {width: 100%;float: left;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px;position: static;bottom: 0px;}
+.foot_copyright p {color: #000;text-align: center;padding: 23px 0 0 0;font-size: 16px;letter-spacing: 1px;}
+.my-notification {
+width: 97%;float: left;padding: 30px 64px;border: none;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px 25px;border-radius: 5px;background: #B3F9D1;text-align: center;}
+.my-notification h3 {font-size: 21px;letter-spacing: 2px;margin-bottom: 17px;}
+.my-notification p {margin-bottom: 5px;line-height: 21px;}
+
+.my-message {width: 100%;float: left;padding: 20px;border: none;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px;border-radius: 5px;}
+.message-box.p-0.mt-0 li {background: #B9FBD5;border-radius: 5px;padding: 10px 14px;width: 100%;list-style: none;float: left;margin-bottom: 15px;}
+.my-message h3 {font-size: 23px;margin-bottom: 0px;letter-spacing: 2px;}
+.left-message {float: left;width: 90%;}
+.right-icon {	float: right;margin: 20px 0;}
+.my-message p {font-size: 16px;letter-spacing:1px;}
+.right-icon span {color: blue;margin-left: 5px;font-size: 15px;}
+.left-message p {margin-bottom: 0px;font-size:15px;letter-spacing: 2px;color: #000;}
+.left-message h4 {font-size: 19px;letter-spacing: 2px;color: #000;}
+.dogimg img {height: 90px;width: 90px;margin: 10px 0;}
+.dog_profile {float: left;width: 50%;}
+.dogimg {float: left;margin-right:9px;}
+.dog_descrptn {float: left;margin: 6px 0px;}
+.message-box.p-0.mt-0.dog02_list li {width: 48%;float: left;margin-right: 16px;background: #fff;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);border: 1px #eee solid;}
+.dog_descrptn p {margin-bottom: 0px;}
+.dog01_list li .right-icon {float: right;margin: 20px 0;width: 49%;}
+.right-icon a span {color: #20BDFF !important;}
+.right-icon a span {color: #20BDFF !important;}
+.right-icon a{ text-decoration:none;}
+.ad_petss {
+color: #fff;
+text-decoration: none !important;
+cursor: pointer;
+width: 300px;
+display: inline-block;
+padding: 11px 0px;
+border-radius: 4px;
+margin-bottom: 20px;
+margin-top: 10px;
+background: linear-gradient(to right, #20BDFF, #5433FF);
+border:0px;	
+text-align:center;
+}
+.dog_descrptn h4 {margin-bottom: 3px; font-size:18px;}
+.privatedetail {width: 100%;float: left;margin: 0px;text-align: center;}
+.left_adres {width: 50%;float: left;padding: 25px;text-align: center;}
+.right_adres {float: left;width: 50%;padding: 25px;}
+.My.details {width: 100%;float: left;}
+.left_adres h3, .right_adres h3 {margin: 4px 0;font-size:18px;}
+.left_adres p, .right_adres P {margin: 2px;}
+.mdetal h3 {text-align: center;font-size: 23px;}
+.action-checkbox li {list-style: none;display: inline-block;margin-right: 57px;}
+.action_buttonbox h3 {text-align: center;}
+.action_buttonbox p {text-align: center;}
+.action-checkbox {text-align: center;background: #A5FECB;padding: 20px 0 0 0;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin-bottom: 0px;margin-top: 26px;}
+.Receivenotifications p {margin: 22px 0 0 0;}
+footer {width: 96%;}
+.left_mlist-block.mb-0 li a {font-size: 16px !important;letter-spacing: 1px;}
+.action-checkbox {text-align: center;background: #A5FECB;padding: 20px 0 0 0;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);}
+.action-checkbox li .form-group label {margin-left: 5px;font-size: 15px;}
+.Receivenotifications p {font-size: 17px;color: #000;}
+.missing_pets {width: 96.4%;float: left;padding: 20px 120px;border: none;
+-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin:20px 30px;border-radius: 5px;text-align: center;}
+.lost_petts {background: linear-gradient(to left, #A5FECB, #20BDFF, #5433FF);color: #fff;
+width: 250px;-webkit-appearance: none;border: 0px;height: 55px;border-radius: 4px;margin: 10px 14px 0 0;cursor: pointer;display: inline-block;line-height: 51px;letter-spacing: 1px;font-size: 21px;
+text-decoration: none !important;}
+.profile_page-content h3 {margin: 26px 0;font-size: 20px;letter-spacing: 2px;color: #000;margin-bottom: 8px;}
+.profile_page-content p {font-size:15px;letter-spacing: 1px;margin-bottom: 9px;}
+.form-group.sort_by label {margin-right: 20px;font-size: 18px;letter-spacing: 1px;margin-top: 16px;margin-bottom: 16px;}
+.form-group.sort_by > select {width: 200px;height: 37px;-webkit-appearance: none;border: 1px #ddd solid;border-radius: 2px;padding: 7px;font-size: 15px;}
+.form-group.sort_by {
+	margin: 30px 0 40px 0;
+	position: relative;
+}
+.form-group.sort_by::after {content: "\f078""";position: absolute;top: 20px;font-family: 'Font Awesome\ 5 Free';font-weight: 600;font-size: 12px;right: 41.2%;}
+.pet_list_inline.p-0.lostpetts  li .tiddles_title p {margin-bottom: 3px;font-size: 16px;}
+.form-group.custom-form {margin: 23px 0 0 0;position: relative;}
+.mising-pets h2 {font-size: 27px;letter-spacing: 2px;margin: 26px 0;color: #29A4FF;}
+.form-wrapper {width: 600px;display: block;margin: 0 auto;background: #fff;border: 1px #ddd solid;padding: 30px 50px;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);border-radius: 5px;}
+.form-group.upload_photo input {width: 100%;text-align: center;position: absolute;z-index: 99999999;
+left: 0px;right: 0px;opacity: 0;max-width: 380px;display: block;text-align: center;margin: 0 auto;height: 48px;}
+.upload_petimage {border: 2px #5433FF solid;padding: 15px 59px;border-radius: 5px;cursor: pointer;color: #5433FF;font-size: 17px;}
+.upload_petimage {border: 2px #5433FF solid;padding: 15px 59px;border-radius: 5px;cursor: pointer;color: #5433FF;font-size: 17px;text-align:center !important;}
+/* Custom Radio Button Start*/
+.radiotextsty {color: #000;font-size: 16px;}
+.customradio {display: block;position: relative;padding-left: 30px; margin-bottom: 0px;cursor: pointerfont-size: 18px;
+-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+/* Hide the browser's default radio button */
+.customradio input {position: absolute;opacity: 0;cursor: pointer;}
+/* Create a custom radio button */
+.checkmark {position: absolute;top: 4px;left: 0;height: 18px;width: 18px;background-color: white;border-radius: 50%;border: 1px solid #4E41FF;}
+.adpeticn {color: #4E41FF;font-size: 26px;line-height: 46px;margin-right: 16px;display: inline-block;}
+/* On mouse-over, add a grey background color */
+.customradio:hover input ~ .checkmark {background-color: transparent;}
+/* When the radio button is checked, add a blue background */
+.customradio input:checked ~ .checkmark {background-color: white;border: 1px solid #4E41FF;}
+.form-check-inline {display: -ms-inline-flexbox;display: inline-flex;-ms-flex-align: center;margin-right: 0px !important;float: left;width: 100%;text-align: left;margin-right: 0px !important;margin-left: 0px !important;}.type {float: left;}
+.form-check-inline label {width: 12% !important;}
+.form-group .customradio {width: 22% !important;}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {content: "";position: absolute;display: none;}
+/* Show the indicator (dot/circle) when checked */
+.customradio input:checked ~ .checkmark:after {display: block;}
+/* Style the indicator (dot/circle) */
+.customradio .checkmark::after {top: 2px;left: 2px;width: 12px;height: 12px;border-radius: 50%;background: #4C46FF;}/* Custom Radio Button End*/
+.form-wrapper .form-group input {font-size: 14px;width: 100%;height: 45px;border-radius: 3px;border: 1px #ddd solid;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);}
+.form-wrapper .form-group label {width: 100% !important;text-align: left;}
+.save-ptinfo {background: linear-gradient(to bottom, #A5FECB, #20BDFF, #5433FF);width: 170px;-webkit-appearance: none;border: 0px;height: 44px;color: #fff;font-size: 18px;letter-spacing: 1px;border-radius: 3px;margin: 20px 0;}
+.form-wrapper .form-group .customradio {width: 16% !important;margin: 10px 0;}
+.create_party {text-decoration: none !important;color: #fff;text-decoration: none !important;
+	cursor: pointer;width: 300px;
+	display: inline-block;padding: 11px 0px;border-radius: 4px;margin-bottom: 20px;margin-top: 10px;background: linear-gradient(to right, #20BDFF, #5433FF);
+}.left_pf {float: left;width: 80%; text-align:left;}
+.dog_hdngname {float: left;margin-left:30px;}
+.dog_img {float: left;}
+.dog_hdngname h3 {margin-top: 11px;margin-bottom: 0px;font-size: 20px;}
+.first_partiy {width: 100%;float: left;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);padding: 15px 20px;border: 1px #ddd solid;background: #fff;}.serch-lct {margin: 31px 0;float: right;font-size: 19px;}
+.map_lctn img {max-width: 100% !important;}
+.map-botm-content {width: 100%;float: left;margin: 18px 0;}
+.map-botm-content h4 {font-size:20px;margin-bottom: 0px;}
+.map-botm-content p {font-size: 14px;	margin-bottom: 1px;margin-top: 4px;}
+.map-botm-content .botm_userlist {margin: 7px 0 25px 0;}
+.first_partiy.second_searchparty {margin: 150px 0 0 0;}
+.admin_searchs .locatrion_users {width: 60%;float: left;padding: 20px 30px;background: #fff;box-shadow: 0 0 35px 0 rgba(154,161,171,.15);}
+.admin_searchs .first_partiy {width: 40%;float: right;}
+.live-party li {display: inline-block;float: left;/* width: 16%; */}
+.live-party.second_list {float: left;width: 100%;margin: 0px 0 15px 0;}
+.live-party.second_list.p-0 li {width: 34%;float: left;}
+.pointer {margin-right: 7px;font-size: 13px;width: 100%;float:left;}
+.live-party.p-0 li label {width: 100% !important;margin-right: 0px !important;padding-left: 19px;}.live-party.p-0 li .radiotextsty {color: #000;font-size: 14px;margin-left:1px;}
+.map-botm-content.Searchpartytools {width: 100%;float: left;text-align: center;}
+.map-botm-content.Searchpartytools h3 {font-size: 26px;}
+.user_view {color: blue;margin-right: 10px;text-decoration: underline;}
+.user-view {color: blue;text-decoration: underline;}
+.map-botm-content.Searchpartytools h3 {font-size: 20px;font-weight: normal;text-align: center;}
+.left_desc {float: left;margin: 16px 0;text-align:left;}
+.left_desc h4 {font-size: 19px;font-weight: normal;margin-bottom: 0px;}
+.left_desc p {margin: 2px;font-size: 14px;font-weight: normal;}
+.dog_img p {font-size: 15px;margin: 6px 0;}
+.map-options {width: 100%;float: left;margin: 7px 0 0 0;}
+.user_active {float: left;width: 35%;text-align: left;}
+.last_select_list {float: right;width: 65%;text-align: right;}
+.p-0.mt-2.slect-option_list li {list-style: none;}
+.user_listingrght h4 {font-size: 16px;margin-bottom: 0px;text-transform: capitalize;font-weight: normal;}
+.user_listingrght p {font-size: 15px;}
+.user_listing {float: left;margin-right: 16px;}
+.p-0.mt-2.slect-option_list li {width: 100%;float: left;margin-bottom: 21px; position:relative;}
+.slect-option_list li .last_select_list::after {content: "\f078""";position: absolute;right: 14px;top: 11px;font-family: 'Font Awesome\ 5 Free';font-weight: 600;font-size: 12px;}
+.missing_pets.serach_partiess.admin_searchs {padding: 20px 150px;}
+.form-group.custom-form.last_select_list {margin: 0px 0;}
+.search_icons {margin-right: 17px;font-size: 21px;color: #999;}
+.new_partycreate {width: 98.3%;float: left;padding: 10px 0px;-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);box-shadow: 0 0 35px 0 rgba(154,161,171,.15);margin: 30px;border-radius: 5px;text-align: center;}
+ .mising-pets h2 {margin:20px;}
+.public-party {color: #fff;text-decoration: none !important;cursor: pointer;width: 300px;display: inline-block;padding: 11px 0px;border-radius: 4px;margin-bottom: 20px;margin-top: 10px;background: linear-gradient(to right, #20BDFF, #5433FF);}

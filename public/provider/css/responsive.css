@@ -1,0 +1,619 @@
+@media screen and (max-width:1400px){
+.filters_byphone.filter-row.d-flex .col-md-4 {padding: 0px !important;}
+.Export_btn {font-size: 12px;text-decoration: none !important;width: 113px;text-align: center;height: 40px;line-height: 36px;margin-left: 4px;}
+.manipulate-data_btn.p-0.turn_assingtech li > div input {width: 97%;}
+.select_teciecn .slect_tecns li {display: inline-block;width:48%;text-align: center;}	
+.Customers-info.form-list > form {padding: 0 8px;}
+.select_boxannula.email_marketingbtn .print-report {float: left;margin-right: 9px;}
+.datesent {font-size: 13px;}
+.slect_emaildate .input-group-addon {position: absolute;top: 27px;color: #9999;font-size: 16px;right: 23px;}
+.regular_gift {width: 74px;}
+.manipulate-data_btn li {display: inline-block;width: 27%;}
+.namesvicky ul li .skiped_area input {left: -8px;height:25px;width:39px;opacity: 0;top: -2px;}
+.namesvicky ul > li > .skiped_area input[type="checkbox"]:checked + label::after {position: absolute;right: 56px;top: 3px;color: red;}
+.slect_tecns.service_list.point-customers li { width:100% !important; }
+ul li .slect_boxtech input {width: 44%;height: 40px;position: absolute;z-index: 1111;opacity: 0;}
+.point_saletechnican li {width: 100%;text-align: center;}
+.complete_listingimg li img {margin-right: 5px;}
+.customerName {font-size: 14px;}
+
+}
+
+
+
+@media screen and (min-width:1024px){
+
+/* .appointment_summary-table .table {display: block !important;} */
+.small-table {display:table !important;width:100% !important;}
+.Export_btn {font-size: 16px;width: 148px;line-height: 36px;margin-left: 17px;}
+.Export_btn {font-size: 12px;text-decoration: none !important;width: 113px;text-align: center;height: 40px;line-height: 36px;
+margin-left: 4px;}
+.checkbox_area input {position: absolute;top: -6px;opacity:0;right: -11px;}
+ul > li > .checkbox_area input[type="checkbox"]:checked + label::after {content: "\f00c";font-weight: 900;font-family: 'Font Awesome\ 5 Free';font-size: 11px;color: red;position: absolute;right: 5px;top: 3px;}
+.skilllist li {padding-right: 0px;}
+.dele_emp, .upd_emp {font-size: 15px;width:42% !important;text-align: center;height:40px;line-height:36px;margin-left: 5px;}
+
+.genrate_customerReport .filter_data_list {display: flex !important;}
+#GenrateCustomer_report .filter_data_list.payroll-row {
+	display: flex !important;
+}
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:1024px){
+.manipulate-data_btn.p-0.transaction_cc li {width: 22%;}
+.botm_transctionbtn > a {float: left;width: 15%;}
+
+.manipulate-date_btnlist.p-0.transcation_fileter li > div .input-group-addon {right:12px;top:6px;}	
+.col-12.col-md-8.col-lg-9.automated_Message_right {padding-left: 0px !important;}
+.Saloon_web_wrapper
+{height:auto !important;}
+.filter_lists.row .col-md-9.col-lg-8 {padding: 0px;}	
+.back-tohome.col-md-3.col-lg-4.expnse-rightbtn.feedbackdate + .col-md-7 .col-lg-9 {padding: 0px;}
+#GenrateCustomer_report .col-md-9.col-lg-8 {padding: 0px;}
+.point_saletechnican li {width: 100%;text-align: center;}
+.slect_tecns.service_list li {width: 49%;text-align: center;}
+.payroll_wraper .Customers-info .slect_tecns.service_list.technician_payroll li {width: 100%;}
+.right_voiddraw .right_voiddraw.mt-3 {margin: 44px 0 0 0 !important;}	
+.slect_tecns.service_list.point-customers li { width:100% !important;}
+.Export_btn.payroll-employee {width: 25% !important;}
+.genrate_customerReport .filter_data_list {display: block !important;}
+.manipulate-date_btnlist li .input-group-addon {padding: 7px 15px 0 6px;}
+.filter_data_list {display: block !important;}
+.skilllist.skipcheck li {width: 20%;}
+.filters_byphone.payroll_btnlist a {width: 23%;}
+.skilllist.skipcheck li {width: auto;}	
+.checkbox_area.skiped_area input {
+	position: absolute;
+	left: -6px;
+	height: 25px;
+	width: 39px;
+	opacity: 1;
+	top: -2px;
+	opacity: 1;
+}
+.manipulate-date_btnlist.p-0.payrool_filterbtn li .input-group-addon {padding: 7px 10px 0 6px;}
+.namesvicky ul > li > .checkbox_area.skiped_area  input[type="checkbox"]:checked + label::after {
+position:absolute;right:48px;top:3px;color:red;} 
+.checkbox_area.skiped_area input {left: -8px !important;opacity:0;top: -2px;}
+.payroll_btnbtm li {display: inline-block;width: 30% !important;}	
+.payrool_filterbtn li {
+	float: left;
+	width: 31%;
+}
+
+.manipulate-date_btnlist li #datepicker input, .manipulate-date_btnlist li #datepicker1 inpu {
+	width: 82%;
+	height: 41px;
+	background: #fff;
+	border: 1px #ddd solid;
+	font-size: 15px;
+}
+.back-tohome.col-md-12.col-lg-7.expnse-rightbtn.feedbackdate .col-md-3 {padding: 0px;width: 30% !important;}
+.payrool_filterbtn li {float: left;width: 45%;}
+.manipulate-data_btn.p-0 li a {margin: 0px !important;}
+.manipulate-data_btn.p-0.payroll_btnbtm li {width: 29% !important;}
+.manipulate-data_btn.p-0.payroll_btnbtm {margin: 17px 0 0 0;}
+.manipulate-date_btnlist.p-0.payrool_filterbtn {margin: 8px 0;padding: 0px;}
+.manipulate-date_btnlist.p-0.payrool_filterbtn li .input-group-addon {
+	width: 17%;
+	padding: 8px;
+	position: absolute;
+	right: 0;
+}
+
+	
+	
+	
+	
+	
+	
+	
+.back-tohome.col-md-12.col-lg-7.expnse-rightbtn.feedbackdate .col-md-3 {padding: 0px;}
+.back-tohome.col-md-12.col-lg-7.expnse-rightbtn.feedbackdate {display: flex;}
+.form-group.message-templte input {width: 100%;}	
+.message .slect_tecns.discounts-cupon {padding: 13px 0px 0 0px;}
+.message + .delet_allbutns a {width: 100% !important;margin-bottom: 10px;}	
+.col-12.col-md-12.col-lg-6.automated_Message_right {max-width: 100%;flex: 0 0 100%;}
+.emailmarketting .col-md-12.col-lg-6 {max-width: 100% ;flex: 0 0 100%;}
+.right_exprtbtnlist {float:right;margin:5px 0;}
+.col-md-12.col-lg-5.custom_layoutgrid {-ms-flex: 0 0 41.666667%; 0 0 41.666667%; max-width: 41.666667%;}
+.col-md-12.col-lg-4.lat-p-l-0.custom_layoutgrid1 {-ms-flex: 0 0 33.333333%;flex: 0 0 33.333333%;max-width: 33.333333%;}
+.form-group.col-md-4.p-l-0 {padding-left: 0px;padding-right: 0px;}
+.form-group.col-md-4.p-l-0 {margin-left: 0px;}
+.list-inlinebtn {width:50px;}
+	
+	
+	
+.search_listfilter.d-flex {display: block !important;}
+.select_boxannula.email_marketingbtn {margin-bottom: 2px;}
+.select_boxannula.email_marketingbtn {margin-bottom: 2px;}
+.select_boxannula.email_marketingbtn .print-report {margin-left: 0px !important;margin-right: 10px;width: 26%;font-size: 14px;}
+.form-group.custom-textarae {padding: 20px 4px 0 4px;}	
+.slect_emaildate .input-group-addon {right: 8px;top: 11px;color:#9999;font-size:12px;}
+.form-group.d-flex.col-md-10.col-lg-6.col-12.slect_emaildate.p-0 {float: left;}
+.form-group.custom-textarae small {font-size:13px;margin:9px 0;float:left;}
+.send_message {width: 100%;max-width:143px;height: 37px;border-radius: 3px;margin: 0px 0 13px 0;color: #fff;font-size: 14px;}
+.search_listfilter .form-group input {width: 89%; 	margin-right: 5px; font-size: 14px;}
+.search_listfilter .form-group input {font-size: 14px;}
+.search_cnt {font-size: 14px;}
+.emailtext_list {margin: 10px 0 10px 0;}
+.form-group.custom-textarae > textarea{font-size:13px;}
+.appointment_summary-table .table thead th {font-size: 13px;}
+.email-text-content .annula-graphaling > .form-group > input {font-size: 13px;}
+button ,input ,textarea, a {font-size: 13px !important;}
+.col-lg-4 .email-text-content {-ms-flex: 0 0 33.333333%;flex: 0 0 100% !important;max-width: 100% !important;}
+.col-lg-8 .annual-body-content {-ms-flex: 0 0 66.666667%;flex: 100% !important;max-width: 100% !important;}
+.col-lg-4 {-ms-flex: 0 0 100%;flex: 0 0 100% !important;max-width: 100% !important;}
+.col-12.col-md-12.col-lg-8.annual-body-content {flex: 0 0 100% !important;max-width: 100% !important;}
+.appointment_summary-table tbody tr td {font-size: 13px;}
+.form-group.col-md-12.col-lg-5.p-0.col-12 {max-width: 100% !important;}
+.form-group.d-flex.col-md-12.col-lg-7.col-12.slect_emaildate.p-0 {max-width: 100% !important;}
+	
+	
+	
+	
+	
+.inventory_btnlist .regular_gift {width: 127px;}	
+.slect_tecns.service_list.point-customers li {width: 100%;}
+.back-tohome.float-right.right_voiddraw {width: auto;float:right;}
+.complete_listingimg li {width: 17%;}
+.right_voiddraw .Export_btn {width: 48px;margin-right: 2px;}
+.customerName {font-size:15px;margin-right:7px;}
+.right_voiddraw {margin: 44px 0 0 2px;font-size: 13px !important;}
+.back-tohome.float-right.right_voiddraw.mt-3 {margin: 44px 0 0 0 !important;}
+.timedisplay {width: 154px;height: 37px;font-size: 15px;letter-spacing: 0;font-weight: 500;}
+.extar_tip_btns button {font-size: 11px;}
+.ex_pt {width: 30%;}
+.filter_data_list {margin: 0px 0 0 0;}
+.emailtext_list li {display: inline-block;width: 12%;font-size: 12px;margin-right: -1px;}
+.datesent {float: left;width: 32%;font-size: 13px; margin:10px 0;}
+	
+.email-text-content .annula-graphaling .form-group select {width: 49% !important;}	
+.annula-graphaling.d-flex select {width: 49% !important;}
+.select_input {width: 50% !important;}
+.custom_leftside {float: left;width: 100%;}
+.select_templates_list {width: 100%;}
+.birthday_templte img {height: auto;}
+.select_templates_list {margin: 20px 0 0 0;}
+.select_boxannula.email_marketingbtn .print-report {margin-bottom: 10px;}
+
+	
+	
+	
+.regular_gift {
+	margin-right: 4px;
+	width: 61px;
+	float: left;
+	font-size: 13px;
+}
+.Export_btn {font-size: 12px;width:92px;text-align:center;height:40px;line-height: 36px;margin-left:3px;}
+.filters_byphone.filter-row {display:flex;}
+.filters_byphone.filter-row .col-md-4 {padding-right: 0px !important;}
+.filters_byphone.report_select > .form-group {width: 100%;}
+.filters_byphone.report_select > .form-group > select {font-size: 13px !important;}
+.appointment_Report_page  > .appointnment_btn {font-size: 14px;margin-left: 6px;margin-right: 0px;}
+.yearly_calander li a {font-size: 13px;width: 100%;}
+.yearly_calander li {display: inline-block;width: 24%;}
+.manipulate-date_btnlist.p-0.right_sidedatetime li {width: 49%;float: left;}
+.input-group-addon {float: left;width: 10%;}
+
+
+#datepicker .form-control, #datepicker1 .form-control , #datepicker2 .form-control  {font-size:13px !important;}
+.manipulate-date_btnlist .todate {font-size: 15px;margin: 5px 0px 0 16px !important;}
+.manipulate-date_btnlist #datepicker, .manipulate-date_btnlist #datepicker1 {width: 81%;margin: 0px 10px 0px 0px;}
+.manipulate-date_btnlist .todate {float: left;margin: 5px 0px 0 -23px !important; font-size:15px;}
+.manipulate-date_btnlist .todate {margin: 0px !important;font-size: 15px;color: #000;float: left;margin: 5px 0px 0 0px !important;}
+.manipulate-date_btnlist li .input-group-addon {padding: 7px 10px;}
+.filter_lists .filters_byphone > .form-group > input {
+	 max-width: 100%; 
+}
+
+
+
+
+
+
+	
+.Customers-info.form-list h2 {margin-top: 0px;}
+.Customers-info.form-list > form {padding: 0 8px;}
+.filters_byphone.select_custmer_reprt > .form-group {width: 100%;float: left;}
+#GenrateCustomer_report .filter_lists.row {padding: 15px 0px 0 15px;margin: 0px 0;}
+.time-frame h2 {font-size:16px;}	
+.genrate_csreports_right h3 {font-size: 15px;padding: 15px 0;margin: 14px 0 0 0;}
+.appointnment_btn {
+border-radius:3px;margin-bottom:15px;font-size:14px;text-decoration:none !important;width:108px;
+height:39px;}
+.customer-repr-btn {width: 146px;line-height: 38px;font-size: 14px;}
+.filters_byphone.expense_TopBar > .form-group > label {color: #000 !important;font-size: 14px !important;}	
+.filter_lists.annual_growth_warper {border: 0px !important;padding: 0 10px !important;}
+.emailmarketting {padding-right: 15px;}	
+.Saloon_web_wrapper {padding:10px 0;}
+.expnse-rightbtn .expnse-top-btnlits a {margin: 0px 0 0 0px;float: right;}
+.expense_TopBar .col-md-2 {padding-left: 0px;}
+.back-tohome.col-md-12.col-lg-4.expnse-rightbtn {margin-bottom: 14px;}
+.Employee_Info h3 {font-size: 15px;}
+#Expense_page .filter_lists.row {padding: 15px 0px 0 4px;margin: 0px 0;}
+.select_teciecn .slect_tecns li {display: inline-block;width: 100%;text-align: center;}
+/* .skilllist li {padding-right: 0px;}
+.checkbox_area input {position: absolute;right: -4px;height: 31px;width: 31px;}
+ul > li > .checkbox_area input[type="checkbox"]:checked + label::after {right: 6px;top: 3px;}
+.dele_emp, .upd_emp {border-radius:3px;margin-bottom:15px;float: left;font-size: 14px;width: 39% !important;}
+ */
+	
+	
+	
+.manipulate-data_btn.p-0.turn_assingtech li .form-group > input {width: 97%;}	
+.manipulate-data_btn.p-0.turn_assingtech li  {width:25%;}	
+.form-group.custom_input {float: left;width:35%;font-size: 13px;}
+.form-group.custom_input input {width: 95%;}
+.Export_btn {width: 96px;margin-left: 3px;}
+.Exit_btn {margin-left:13px;width:47px;}
+.Export_btn {width:113px;text-align: center;height:40px;margin-left:6px;}
+
+.Exit_btn {font-size: 14px;text-decoration: none !important;width: 47px;}
+.giftcard_detail-info .giftcard-summary > .form-group > input {height: 35px;}
+.giftcard_detail-info .giftcard-summary {padding: 5px 8px;	}	
+.filter_lists.row .col-md-12.col-lg-6 {padding: 0px !important;}
+.preferred_gift {padding-left: 4px;padding-right: 7px;}
+.checkbox_area input {position: absolute;right: 11px;height: 35px;width: 44px;opacity: 1;top: -2px;opacity: 0;}
+.appointment_summary .filter_lists.row .col-md-8 {padding: 0 15px !important;}
+.appointment_summary-table.genrate_customerReport {border-radius: 10px !important;/* -webkit-box-shadow:none !important;  */}
+.skilname {font-size: 13px;}
+.checkbox_area input {position: absolute;top:-4px;opacity:0;}	
+.sallon_body_content {width: 100%;float: left;margin: 50px 0;}
+.sallon_feature_list li {width:23%;text-align:center;margin-left:10px;border-radius:3px;}
+.sallon_feature_list li a h2 {font-size: 12px;}
+.slect_tecns li {display: inline-block;width: 49%;text-align: center;}	
+.slect_tecns.service_list li {width:100%;text-align: center;}	
+.Customers-info h2 {font-size: 16px;margin-bottom: 11px;margin-top: 7px;}
+.filters_byphone .form-group {width: 47%;float: left;margin-left: 10px;}
+
+.customerName {font-size:16px;margin-right:9px;}
+.filter_lists.row {padding: 15px 0px;margin: 0px 0;}
+.select_teciecn {padding:8px 8px;}
+.service_techn {padding: 0 9px;}
+.appointment_summary-table .table {}
+ul li .slect_boxtech .aftercheck {font-size: 12px;cursor: pointer;}
+.sallon-staff-list li {width: 30.5%;}
+.appointment_summary-table.genrate_customerReport {margin:0px 0 0 0;}
+.students {width:100%;margin-left: 0px;border-radius: 3px;margin-bottom: 0;margin-top: 8px; font-size: 13px;}
+.giftCrads_detail_discounts {padding: 0 8px;}
+.web-tabs nav > div a.nav-item.nav-link.active::after {bottom: -42px;}
+.appointment_summary-table.genrate_customerReport h1 {text-align: center;font-size: 16px;}
+.appointment_summary-table.genrate_customerReport.payroll_wraper h3 {font-size: 16px;}
+.extra_tip0, .extra_tip1  {width: 100%;}
+.form-group.grand-totl label {float: left;width: 100%;}
+.form-group.grand-totl input {width: 100%;margin-left: 0px;}
+.ex_cbmn {width:35%;}
+.complete_listingimg li {width: 29%;}
+.extar_tip_btns {font-size: 12px;}
+ul li .slect_boxtech input {
+	width: 80%;
+	height: 35px;
+	opacity: 0;
+}
+.service_techncian {font-size: 12px;}
+.Export_btn {margin-left: 0px;}
+.Export_btn {
+	font-size: 12px;
+	text-decoration: none !important;
+	width: 132px;
+	text-align: center;
+	height: 40px;
+	line-height: 36px;
+	margin-left: 1px !important;
+	margin-right: 7px !important;
+}
+.Exit_btn {margin-left: 7px;float: left;font-size:14px;width: 37px;height: 40px;}
+.giftcard_detail-info .giftcard-summary > .form-group > label {font-size: 14px;margin-bottom: 4px;}
+.back-tohome {float: right;margin-bottom: 0px;}
+.back-tohome.col-md-3.col-lg-4.expnse-rightbtn.feedbackdate .col-md-12 {padding: 0px;}
+.filters_byphone.filter-row.inventory_btnlist .col-md-12 {padding: 0px;}
+
+
+}
+
+@media screen and (min-width:768px){
+.back-tohome.col-md-12.col-lg-6.expnse-rightbtn.feedbackdate {display: flex;}	
+	
+}
+
+
+@media screen and (max-width:767px){
+	
+.pointofsaledraw.float-right.mt-3 a {float: left;}	
+.pointofsaledraw.float-right.mt-3 {width: 100%;}	
+.filter_data_list .col-md-11.col-12 {padding: 0px !important;}
+.col-12.col-md-8.col-lg-9.automated_Message_right {padding: 0px !important;}
+	
+	
+.namesvicky .skilllist li {width:auto;}
+.manipulate-date_btnlist li .input-group-addon {padding:8px 12px;position: absolute;right: 0px;top: 5px;}
+.namesvicky ul > li > .checkbox_area.skiped_area  input[type="checkbox"]:checked + label::after {
+position:absolute;right:46px;top:3px;color:red;} 
+.checkbox_area.skiped_area input {left: -8px !important;opacity:0;top: -2px;}
+.GenrateCustomer_report .Exit_btn {margin-left: 0px;}
+.manipulate-data_btn.p-0.payroll_btnbtm li a {width: 100%;margin-top: 10px;}
+.checkbox_area.skiped_area input {left: -8px !important;opacity:0;top: -2px;}
+/* .namesvicky ul > li > .checkbox_area.skiped_area input {
+	left: -8px !important;
+	opacity: 0;
+	top: -2px;
+	height: 35px !important;
+	width: 50px !important;
+	color:red;
+}*/
+
+
+
+
+
+	
+	
+.filter_data_list .col-md-8 {padding: 0px !important;}	
+.manipulate-data_btn.p-0.transaction_cc li {width: 100%;}
+.col-md-12.botm_transctionbtn {padding: 0px;}
+.filter_data_list > .col-md-8 + .col-md-4 {padding: 0px;}	
+.manipulate-date_btnlist .todate {font-size: 18px;color: #000;float: left;}
+	
+.email-text-content .annula-graphaling > .form-group {float: left;width: 100%;}	
+.annula-graphaling.d-flex {margin: 15px 0;width: 100%;display: block !important;}
+.emailtext_list li {display: inline-block;width: 49%;font-size: 13px;}	
+.col-md-12.select_boxannula.email_marketingbtn {padding: 0px;}
+.select_boxannula.email_marketingbtn .print-report {margin: 5px 0;}
+.annula-graphaling.d-flex {margin: 0px 0;}
+.search_listfilter.d-flex {display: block !important;}
+.form-group.d-flex.col-md-7.col-12.slect_emaildate.p-0 {display: block !important;}
+.col-12.col-md-12.email-text-content {padding: 0px;}
+.col-12.col-md-12.annual-body-content {padding: 0px;}
+.slect_emaildate .input-group-addon {z-index: 999;top: 31px;color: #9999;font-size: 16px;}
+.slect_emaildate #datepicker {margin: 12px 0px 3px 0px;padding-top: 0px !important;float: left;}
+.delet_allbutns {margin: 8px 0;}
+.delet_allbutns {width: 100%;}
+.selectBtn {width: 100% !important;margin: 8px 0;}
+.deletBtn {width: 100% !important;}
+.email-text-content .annula-graphaling .form-group select {float: left !important;width: 100% !important;}
+.select_boxannula.email_marketingbtn .print-report {margin-left: 0px !important;margin-right: 6px;width: 176px;margin: 6PX 8px 0 0px;}
+.delet_allbutns a {width: 100%;margin: 7px 0;}
+.form-group.message-templte input {width: 100%;}
+.message .slect_tecns.discounts-cupon {padding: 13px 0px 0 0px;}
+.message + .delet_allbutns a {width: 32% !important;}
+.message ul li .slect_boxtech input[type="checkbox"]:checked + label {background: #0ebe2c;color: #fff !important;border: 1px #0ebe2c solid;padding: 12px 0;}
+.form-group.d-flex.col-md-6.col-12.slect_emaildate.p-0 {display: block !important;}
+.form-group.message-templte {float: left;}
+.custom_leftside {float: left;width: 100%;padding: 12px 5px;}
+.select_templates_list {width: 100%;float: right;}
+.col-12.col-md-12.automated_Message_right {padding: 0px;}
+.select_templatebotm li {width: 100%;}
+.select_templatebotm {text-align: center;margin: 0px 0 0 0;}
+.save_btnlnk.select-preview {width: 100%;height:44px;border-radius:3px;margin-left: 0;margin-bottom: 12px;}
+.col-12.col-md-6.automated_Message_right {padding: 0px;}
+.right_option.float-right.d-block.d-sm-block.d-md-none.d-lg-none {width: 100%;}
+.annual-report.emailmarketting.row.pt-3 .col-md-6 {padding: 0px;}
+.birthday_templte img {max-width: 100% !important;height:auto !important;}
+.select_templatebotm li .form-group {margin-bottom: 0px;}
+.select_input {width: 100% !important;}
+.form-group.d-flex.col-md-12.col-lg-7.col-12.slect_emaildate.p-0 {display: block !important;}
+.form-group.col-md-12.col-lg-7.col-12 {padding: 0px;}
+.form-group.custom-textarae {padding: 20px 0px 0 0px;}
+.search_cnt {float: right; width:21%;}
+.search_listfilter .form-group input {width: 75%;}
+.send_message {float: none;width: auto;height:39px;display: block;margin: 10px auto;padding: 5px 22px !important;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+.ex_cbmn {width: 32%;}
+.form-group.m-0.mt-3 {margin: 0px !important;margin-bottom: 10px !important;}
+.appointment_summary-table.genrate_customerReport h1 {font-size: 15px !important;}
+
+.filters_byphone.payroll_btnlist a {width: 48%;}
+.filters_byphone.payroll_btnlist {float: left;width: 100%;}
+#GenrateCustomer_report .filter_lists.row > .col-md-10 {padding: 0px !important;}
+.web-tabs nav > div a.nav-item.nav-link, .web-tabs nav > div a.nav-item.nav-link.active {color: #000 !important;}
+ul li .slect_boxtech input {width: 90%;height: 41px;}
+ul li .slect_boxtech input[type="checkbox"]:checked + label {padding: 7px 0;}
+.appointnment_btn {width: 48%;margin-right: 5px;}
+.Employee_Info.giftcard_detail-info h3 {font-size: 15px !important;padding: 10px 0;}
+.giftcard_detail-info .giftcard-summary > .form-group > .datepicker > .input-group-addon {color: #9999;}
+
+
+
+
+.filters_byphone.expense_TopBar .form-group label {color:#000 !important;margin-bottom:6px;margin-top: 0px !important;}
+.filters_byphone.expense_TopBar {display:inline-block;}
+.filters_byphone.expense_TopBar .form-group {margin-bottom:6px;}
+.Export_btn.other-employe.expense_btnlist {margin: 9px 0 0 0;width: 100%;}
+.expnse-rightbtn .expnse-top-btnlits a {margin: 13px 0 0 0px;float: right;width: 100%;}
+.emp_Details {padding: 10px 10px;}
+.emp_Details .expense_print_sheet .update_btn_list a {width: 29%;margin-right: 10px;line-height: 39px;}
+.datepicker input {font-size: 14px !important; width: 100% !important;
+max-width: 100% !important;}
+.expense_print_sheet + .update_btn_list a {width: 31%;margin-right: 5px;line-height: 40px;}
+.date-spent {padding: 8px !important;font-size: 16px !important;margin-bottom: 11px !important;}
+.filters_byphone.expense_TopBar .form-group.col-md-3 {padding: 0px;}
+.filters_byphone.expense_TopBar > .form-group > label {color: #000 !important;font-size: 13px;}
+.filters_byphone > .form-group > select {font-size: 13px;}
+.form-group label {font-size: 14px !important;color: #000 !important;}
+.back-tohome.float-right {width: 100%;}
+.filters_byphone .Export_btn {width: 48%;margin-right: 5px;}
+.back-tohome.float-right .Export_btn {width: 100%;}
+.update_btn_list .dele_emp, .upd_emp {width: 44% !important;float: left !important;margin-right: 0px;}
+.skilllist li {padding-right: 0px;}
+.checkbox_area input {position: absolute;right: -4px;height: 31px;width: 31px;}
+ul > li > .checkbox_area input[type="checkbox"]:checked + label::after {right: 6px;top: 3px;}
+.filter_data_list {width: 100%;display: block;}
+.float-right.top-mobilehome {float: right;width: 100%;}
+
+.filters_byphone.float-right.appointment_Report_page {width: 100% !important;padding: 0px !important;}
+.filters_byphone.float-right.appointment_Report_page a {width: 48% !important;float: left !important;margin: 0px !important;margin-right: 5px !important;margin-bottom: 7px !important;
+}
+
+
+
+	
+	
+.Saloon_web_wrapper .filters_byphone {margin:5px 0 0 0;}	
+.form-group.report-wrapp {padding: 4px 10px;}
+.filters_byphon.customer_filter .form-group {width: 100%;float: left;margin-right: 0px;}	
+.filters_byphon.customer_filter.allcustomer_fields > .form-group > input {width: 100%;}
+.filters_byphon.customer_filter.allcustomer_fields > .form-group {margin-bottom: 0px;}
+.filters_byphon.customer_filter .form-group label {margin-right: 0;color: #000;font-size: 15px;margin-left: 0;text-align: center;width: 100%;}
+.filters_byphone {margin: 15px 0 0 0;float: left;width: 100%;}
+.Print_btn.importbtn {background: #0ebe2c;color: #fff;width: 46%;letter-spacing: 0px;margin-right: 3px;}
+.genrate_csreports {margin:0px 0;}
+.giftcard_detail-info .giftcard-summary > .form-group > label {font-size: 14px;margin-bottom: 4px;}
+.filters_byphone {margin: 0px 0 0 0;}
+.fancy-radios li {margin-bottom:8px;width:49%;}
+.automated_Message_right {padding-left: 15px;}
+.custom-radios > .form-group > #datepicker2 > input {font-size: 14px;}
+.genrate_csreports {margin: 0px 0;box-shadow: none !important;}
+.filter_lists.row {padding: 15px 10px;}
+label{font-size:14px !important;}
+button, a, p {font-size:13px !important;}
+h3 {font-size: 17px !important;letter-spacing: 0px;font-weight: normal !important;}
+h2 {font-size:18px !important;letter-spacing: 0px;font-weight: normal !important;}
+h1 {font-size: 20px !important;letter-spacing: 0px;font-weight: normal !important;}	
+.btn_listupr li {width: 100%;float: left;margin-bottom: 7px;}
+.btn_listupr li a {width: 100%;}	
+.skilname {font-size: 12px;}	
+.back-tohome.col-md-4.col-lg-4.expnse-rightbtn.feedbackdate + .col-md-7 {padding: 0px !important;}
+.float-right.reprintbtn {width: 100%;}
+.automated_Message_right {padding:auto;}
+.manipulate-data_btn.p-0.turn_assingtech li div input {max-width: 100%;}
+.botm_transctionbtn > a {margin-right:0;width: 100%;margin-bottom:10px;}
+.print-report {margin-left: 0px;width: 100% !important;}
+.manipulate-data_btn.p-0.turn_assingtech li a {width: 100%;}
+.botm_transctionbtn > .form-group {float: left;width: 100%;margin-right: 0px;margin: 13px 0;}
+.slect_tecns.service_list li {width: 100%;text-align: center;}
+.manipulate-data_btn.p-0.turn_assingtech li {width: 100%;float: left;margin-bottom: 10px;}
+.row.no-gutter {margin: 0px !important;}
+.emailmarketting { box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);margin-left: 0px;margin-right: 0px;}
+.manipulate-data_btn.p-0.turn_assingtech li {margin-bottom: 10px;}
+.manipulate-data_btn.p-0.turn_assingtech li .form-group {margin-bottom: 10px;}
+.Saloon_web_wrapper {padding: 14px 0;}
+.filters_byphone.point-of-sale-topbar {width: 100%;float: left;}
+.filters_byphone.point-of-sale-topbar {width: 100%;float: left;margin: 6PX 0;}
+.ex_pt {font-size: 14px;}
+.students {width: 100%!important;float: left;}
+.web-tabs {margin: 0px 0;}
+#GenrateCustomer_report .col-md-3 {padding: 0px !important;}
+.form-group.grand-totl label {float: left;width: 100%;}
+.form-group.grand-totl input {margin-left: 0px;}
+.filters_byphone.point-of-sale-topbar {text-align: center;margin-bottom: 17px;}
+.manipulate-data_btn.p-0.turn_assingtech li {width: 48%;float: left;margin-bottom: 10px;text-align: center;margin-left: 4px;}
+.right_option.float-right {width: 94%;}
+
+.form-group.custom_input {float: left;width: 100%;font-size: 14px;}	
+.sallon-staff-list li {width:100%;}
+.back-tohome.float-right.right_voiddraw a {width: 31%;margin-left: 1px;}
+.appointment_summary-table.genrate_customerReport.payroll_wraper {margin: 0px;}
+.select_teciecn {padding: 2px 11px;float: left;width: 100%;margin: 14px 0 0 0;}
+.back-tohome {
+	float: right;
+	margin-bottom: 0px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+.web-tabs {margin: 0px 0;}
+.web-tabs nav > div a.nav-item.nav-link.active::after {bottom: -39px;left: -32%;}
+.filter_data_list .col-md-7 {padding: 0px;}
+.filter_data_list {margin: 20px 0 0 0;}
+
+
+.filter_lists.row {background:#fff;margin:0px 0;float: left;width: 100%;border-radius:10px;}
+.tip_ratio span {width: 100% !important;}
+.complete_listingimg li {width: 31%;}
+.today_databtn {background: #f6f6f6;width: 166px;color: #fff;display: inline-block;height: 42px;border-radius: 3px;line-height: 40px;border: 1px #ddd solid;color: #000;}
+.addnew_apointments {width: 100%;display:block;	margin: 30px 0;float: left;}
+.filter_lists.row .col-md-12 {padding: 0px;}
+.Export_btn {margin-left: 0px;}
+.filter_lists.row .col-md-2, .filter_lists.row .col-md-5, .filter_lists.row .col-md-5  {padding: 0px !important;}
+.back-tohome.float-right.right_voiddraw {width: 100%;float: right;}
+.web-tabs{margin: 0px 0;}
+.giftCrads_detail_discounts {padding: 0 17px;}
+.appointment_summary-table.genrate_customerReport h1 {margin-bottom: 0px;}
+.students {margin-left: 0px;margin-bottom:0px;margin-top:7px;text-decoration: none !important;}
+
+.time_lists_btn li a {font-size: 14px;letter-spacing: 0;}	
+.time_lists_btn li {width:43%;}
+.edit_employeee-detail.row {margin: 0px !important; }
+.right_exprtbtnlist .Exit_btn {text-align: center;display: block;margin: 0 auto;width: 98%;}
+.right_exprtbtnlist li {width: 67%;}
+.edit_employeee-detail.row {width: 100%;padding: 0px 0 0 0px;margin: 15px 0 !important;float: left;}
+.giftcard_detail-info .giftcard-summary > .form-group > input {width: 100%;max-width: 100%;}
+
+.right_exprtbtnlist li {width: 100%;}
+.filter_lists.row .col-md-6 {padding: 0px;}
+.table.table-responsive {width: 100%;display:block;}
+.inventory_btnlist .regular_gift {width: 100%;}
+.preferred_gift {width: 47%;margin-bottom: 1px;margin-top: 0px;}
+.right_exprtbtnlist {float: right;width: 100%;}
+.right_exprtbtnlist {float: right;width: 100%;}
+.appointment_summary-table tbody tr td {padding: 9px 4px !important;cursor: pointer;}
+
+
+
+
+
+.brand_logo a img {max-width: 175px;display: block;text-align: center;margin: 0px auto 12px auto;}
+.float-right li div h4 {font-size: 14px;}
+.sallon_feature_list li {position:relative;overflow:hidden;margin-bottom:20px;width:100%;margin-left: 0px;}
+.app_navbar.navbar_light {padding: 8px 0 0 0;border: none;background: none;}
+.adress_line h4 {color: #fff !important;line-height: 22px;margin-left: 0px !important;text-align: left;}	
+.appointment_summary-table {width: 100%;padding: 0px 4px; margin:10px 0;}
+.Customers-info.form-list {margin-bottom: 20px;}
+.web-tabs {margin:15px 0;float:left;width:100%;}
+.filter_lists.row .col-md-8 {padding: 0px;}
+.addnew_apointments.row .col-md-4 {padding: 0px;}
+.slect_tecns li {display: inline-block;width: 100%;text-align: center;}
+.addnew_apointments.row .col-md-5 {padding: 0px;}
+.addnew_apointments.row .col-md-5 {padding: 0px;}
+.filters_byphone .form-group input {width: 100%;max-width: 100%;}
+.sallon_body_content {width: 100%;float: left;margin: 30px 0;}
+.salon_adress ul {float: none !important;text-align: center;}
+.salon_adress .float-right li {margin-left: 0px;}	
+.slect_tecns.service_list li {width: 100%;text-align: center;}
+.filters_byphone > .form-group {width: 100%;}
+.filter_data_list.row {margin-left:0px !important;margin-right:0px !important;}
+.Month_databtn {width: 100%;height: 42px;line-height: 40px;margin:0;}
+.today_databtn {width: 100%;}
+.Year_databtn {width: 100%;}
+.manipulate-data_btn li {display: inline-block;width: 100%;}
+.Week_databtn {width: 100%;}
+.manipulate-date_btnlist.p-0 li {float: left;width: 100% !important;}
+.filter_data_list.row .col-md-5 {padding: 0px !important;}
+.filter-btn {background: #e93e3a;color: #fff;width: 100%;margin: 14px 0 0 0 !important;}
+.manipulate-date_btnlist #datepicker, .manipulate-date_btnlist #datepicker1 {width: 100%;margin: 0px 10px 0px 0px;}
+.filter_data_list.row .col-md-7 {padding: 0px;}
+.Exit_btn + .col-md-9.col-lg-8 {padding: 0px;}
+.back-tohome + .col-md-7.col-lg-9 {padding: 0px;}
+.report_btn {width: 47%;margin-bottom: 8px;}
+.Export_btn {width:97%;}
+.Print_btn {width:85%;}
+.filter_lists.row .col-md-4 {padding:0px;}
+.appointnment_btn {width: 48%;}
+.Exit_btn {
+	float: right;
+	width: 100%;
+	padding: 0px 7px;
+	margin-left: 0px !important;
+	margin-bottom: 3px;
+}
+.filters_byphone.float-right {float: left;width: 100%;padding: 0px 0px;}
+.back-tohome.col-md-7.expnse-rightbtn.feedbackdate {padding: 0px;}
+.back-tohome.col-md-7.expnse-rightbtn {display: block !important;}
+.regular_gift {width:26%;float: left;font-size: 14px;margin-bottom: 12px;}
+.filters_byphon.customer_filter.allcustomer_fields {margin: 6px 0 0 0;}
+.Saloon_web_wrapper {height: auto !important;min-height: auto !important;}
+
+
+
+}

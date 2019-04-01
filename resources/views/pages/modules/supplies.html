@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+    <title>Saloon web application</title>
+</head>
+
+<body>
+    <div class="Saloon_web_wrapper" data-parallax="scroll" style="background:url(images/bg1.png);">
+        <div class="customrReportGenrate_summary" id="GenrateCustomer_report">
+            <div class="container-fluid">
+                <div class="filter_lists row">
+                     <div class="col-md-9 col-lg-8 p-0-l">
+                        <div class="filters_byphone filter-row inventory_btnlist">
+						    <div class="col-md-12 p-l-0">
+						       <ul class="btn_listupr"> 
+								   <li><a href="inventory.html" class="preferred_gift">Service Name</a></li>
+								   <li><a href="product.html" class="preferred_gift">Product</a></li>
+								   <li><a href="giftcardinventory.html" class="regular_gift">Giftcards</a></li>
+								   <li><a href="discount.html" class="preferred_gift">Discounts</a></li>
+								   <li><a href="supplies.html" class="preferred_gift active">Supplies</a></li>
+							   </ul>
+                            </div>
+                            
+						</div>
+                    </div>
+                    <div class="back-tohome col-md-3 col-lg-4  expnse-rightbtn feedbackdate p-r-0">
+					       <div class="col-md-12">
+								<div class="expnse-top-btnlits">
+									<ul class="right_exprtbtnlist">
+									  <li><a href="report.html" class="Export_btn export_tofedback">Create Category</a></li>
+									  <li><a href="index.html" class="Exit_btn"><i class="fas fa-home"></i></a></li>
+									 </ul>
+								</div>
+							 </div>
+					 </div>
+					 <div class="col-md-7 col-lg-9">
+                        <div class="appointment_summary-table genrate_customerReport table-responsive">
+                            <table class="table" id="select-table">
+                                <thead>
+                                     <tr>
+									   <th>Image</th>
+									   <th>Product Name</th>
+									   <th>Category</th>
+									   <th>Price</th>
+									    <th>Q.Used</th>
+										 <th>Q.Left</th>
+										 <th>Barcode</th>
+										 <th>Reorder</th>
+									</tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td><i class="fab fa-facebook-f"></i></td>
+                                        <td>Sunskin Lotion</td>
+										 <td>$15</td>
+                                        <td>15</td>
+										<td>5</td>
+										<td>84025475</td>
+										<td>15</td>
+										<td>15</td>
+									</tr>
+                                   <tr>
+                                        <td><i class="fab fa-facebook-f"></i></td>
+                                        <td>Sunskin Lotion</td>
+										 <td>$15</td>
+                                        <td>15</td>
+										<td>5</td>
+										<td>84025475</td>
+										<td>15</td>
+										<td>15</td>
+									</tr>
+								</tbody>
+                            </table>
+                         </div>
+                    </div>
+					<div class="col-md-5 col-lg-3 p-r-0">
+                       <div class="edit_employeee-detail row" id="open_editfield" style="display:block;">
+                          <div class="Employee_Info giftcard_detail-info">
+                                <h3>Product Informations</h3>
+								  <form method="post" class="giftcard-summary inventory_mangment">
+								     <div class="form-group">
+									    <label>Product Name</label>
+										<input type="text" placeholder="">
+									 </div>
+									 <div class="form-group">
+									    <label>Product Category</label>
+										<input type="text" placeholder="">
+									 </div>
+									<div class="form-group">
+									    <label>Price</label>
+									 	<input type="text" placeholder="">
+									 </div>
+									 <div class="form-group">
+									    <label>Quantity</label>
+									 	<input type="text" placeholder="">
+									 </div>
+									 <div class="form-group">
+									    <label>Product Barcode</label>
+									 	<input type="text" placeholder="">
+									 </div>
+									  
+									  
+									  <div class="form-group upload_imge_imges">
+									    <label>Product image</label>
+									 	<input type="file" placeholder="" class="upload_imge">
+										<label class="upldbtns">Upload image</label>
+									  </div>
+									
+									 <div class="form-group product_btnmrgn">
+									    <button class="encode_giftcard">Add Service</button>
+										 <button class="encode_giftcard">Update Service</button>
+										<button class="delet_giftcard">Delete Giftcard</button>
+									 </div>
+								  </form>
+                              </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+	
+	
+	
+    <!-------CREATE-CATEGORY-POPUP-WINDOW------>
+	<!-- Trigger the modal with a button -->
+           <!-- Modal -->
+			<div id="CreateCategory" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-body">
+				     <div class="slect_categroy-pop">
+					     <button type="button" class="close select_cat" data-dismiss="modal">&times;</button>
+					    <form method="post">
+						  <div class="form-group">
+							 <label>Expense Category</label>
+							 <select>
+								<option>Select Category</option>
+								<option>Silver</option>
+								<option>Gold</option>
+								<option>Diamond</option>
+							 </select>	
+						  </div>
+						  
+						   <button class="submit_catgry">Submit Category</button>
+						  </form>
+					  </div>
+				  </div>
+				  
+				</div>
+
+			  </div>
+			</div>
+	<!-------CREATE-CATEGORY-POPUP-WINDOW-CLOSE----->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+</body>
+
+</html>

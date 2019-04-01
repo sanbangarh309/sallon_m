@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+    <title>Saloon web application</title>
+
+</head>
+
+<body>
+    <div class="Saloon_web_wrapper" data-parallax="scroll" style="background:url(images/bg1.png);">
+        <div class="appointment_summary">
+            <div class="container-fluid">
+                <div class="filter_lists row">
+                    <div class="col-md-4">
+                        <div class="filters_byphon customer_filter">
+                            <div class="form-group">
+							  <input type="text" placeholder="customer name">
+                            </div>
+							
+							<div class="form-group">
+							<label class="">or</label>
+							  <input type="text" placeholder="customer phone">
+                            </div>
+                        </div>
+						<div class="appointment_summary-table customer_list_table custmer_table">
+						  <table class="table table-responsive" id="select-table">
+                            <thead>
+                                <tr>
+                                 <th>Customers</th>
+								      <th>Phone#</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+								    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    
+                          
+                                    <tr>
+                                       <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                               
+                                    </tr>
+                                    <tr>
+                                       <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                               
+                                    </tr>
+                                    <tr>
+                                    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    </tr>
+									 <tr>
+                                    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    </tr>
+									 <tr>
+                                    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    </tr>
+									 <tr>
+                                    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    </tr>
+									 <tr>
+                                    <td>Karen Johns</td>
+                                    <td>402-203-4587</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+						   <a href="report.html" class="Print_btn importbtn">Import</a>
+						   <a href="report.html" class="Export_btn eprt_tbn">Export to Excel</a>
+						</div>
+						 </div>
+                    <div class="col-md-5">
+                        <div class="filters_byphone">
+						    <a href="customer.html" class="appointnment_btn active">All Customers</a>
+						    <a href="all-customer.html" class="appointnment_btn">All Customers</a>
+                            <a href="customer-report.html" class="report_btn customer-repr-btn">Customers Report</a>
+						    
+                        </div>
+						<div class="customer_information_fill">
+						   <form method="post" class="row">
+						      <div class="col-md-12 text-center">
+							    <h3>Customer Informations</h3>
+							  </div>
+							   <div class="form-group col-md-6">
+							     <input type="text" placeholder="First Name">
+							   </div>
+							   <div class="form-group col-md-6">
+							     <input type="text" placeholder="Last Name">
+							   </div>
+							    <div class="form-group col-md-6">
+							     <input type="text" placeholder="Phone#">
+							   </div>
+							     <div class="form-group col-md-6">
+							       <input type="text" placeholder="Email">
+							   </div>
+							    <div class="form-group col-md-6">
+							       <input type="text" placeholder="Birthday">
+							   </div>
+							   <div class="col-md-12 text-center">
+							    <h2><a href="javascript:void(0)" id="Open_service">Service Informations
+									      <span class="change_icon"><i class="fas fa-angle-down"></i></span></a> 
+									  </h2>
+									  
+							  </div>
+							    <div class="Service_info row" style="display:none;">
+									   <div class="form-group col-md-6">
+										 <input type="text" placeholder="Reward Card#">
+									   </div>
+									   <div class="form-group col-md-6">
+										 <input type="text" placeholder="Reward Level">
+									   </div>
+										<div class="form-group col-md-6">
+										 <input type="text" placeholder="Customer Since">
+									   </div>
+										 <div class="form-group col-md-6">
+										   <input type="text" placeholder="Visit">
+									   </div>
+										<div class="form-group col-md-6">
+										   <input type="text" placeholder="Total Spent">
+									   </div>
+									   <div class="form-group col-md-6">
+										   <input type="text" placeholder="Reward Points">
+									   </div>
+									   <div class="form-group col-md-6">
+										   <input type="text" placeholder="Last Visit">
+									   </div>
+									   <div class="form-group col-md-6">
+										   <input type="text" placeholder="Last Review">
+									   </div>
+									   <div class="form-group col-md-6">
+										   <button class="past_service">Past Service</button>
+									   </div>
+									   <div class="form-group col-md-6">
+										   
+											 <textarea>Last Technician</textarea>
+									   </div>
+										 <div class="form-group col-md-6">
+										   <textarea>Last Service</textarea>
+										 </div>
+										 <div class="form-group col-md-6">
+											<textarea>Service Notes</textarea>
+										 </div>
+								 </div>
+							<div class="filters_byphone botm_custmer_listbtn">
+						    <a href="" class="appointnment_btn">Add</a>
+                            <a href="report.html" class="report_btn">Update</a>
+						    <a href="index.html" class="deleteserv_btn">Delete</a>
+                          </div>
+						   </form>
+						</div>
+					</div>
+					 <div class="col-md-3">
+					     <div class="Customer_membership-type">
+						      <div class="float-right">
+							    <a href="index.html" class="Exit_btn"><i class="fas fa-home"></i></a>
+							  </div>
+							  <div class="meber-are-box">
+								  <ul class="members">
+									 <li><div class="total_custmer">
+										  <h3>Total Customers</h3>
+											<h4>3500</h4>
+									 </div></li>
+									 <li><div class="sliver-custmer">
+										  <h3>Silver Members</h3>
+											<h4>2750</h4>
+									 </div></li>
+									 <li><div class="gold_custmer">
+										  <h3>Gold Members</h3>
+											<h4>500</h4>
+									 </div></li>
+									 <li><div class="diamond_custmer">
+										  <h3>Diamond Members</h3>
+											<h4>250</h4>
+									 </div></li>
+								  </ul>
+								  <div class="static_chart">
+								     <img src="images/Chart-09.png" alt="static">
+								  </div>
+							 </div>
+						 </div>
+					 </div>
+                    
+               </div>
+           </div>
+        </div>
+    </div>
+ </div>
+</div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/parallax.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    
+    <script>
+	      $(document).ready(function(){
+		  $("#Open_service").click(function(){
+			$(".Service_info").slideToggle("slow");
+			$("i", this).toggleClass("fas fa-angle-up fas fa-angle-down");
+		  });
+		});
+
+	
+	
+	
+        $('#select-table').on('click', 'tbody tr', function(event) {
+            $(this).addClass('highlight').siblings().removeClass('highlight');
+            $('.update_appointments').addClass('update_apptinfo').siblings().removeClass('update_apptinfo');
+        });
+   </script>
+</body>
+
+</html>
