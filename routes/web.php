@@ -49,11 +49,18 @@ Route::namespace('Provider')->group(function () {
 	Route::get('/', 'ProviderController@index')->name('provider');
 	Route::get('/dashboard', 'ProviderController@index')->name('provider');
 	Route::get('/logout', 'ProviderController@Logout')->name('providerlogout');
-	Route::get('/temps/{slug}', 'ProviderController@temps')->name('temps');
+	Route::get('/temps/{slug}/{type}', 'ProviderController@temps')->name('temps');
+	Route::post('/temps/{slug}/{type}', 'ProviderController@temps')->name('posttemps');
 	Route::get('/dashboard/{slug}', 'ProviderController@moduleTemplate')->name('template');
+	Route::post('/dashboard/{slug}', 'ProviderController@moduleTemplate');
 
 	// Category
 	Route::post('/addcategory', 'ProviderController@addCategory');
+
+	// Employee
+	Route::post('/addemployee', 'ProviderController@addEmployee');
+	Route::get('/employee/{id}', 'ProviderController@getEmployee');
+	Route::delete('/employee/{id}', 'ProviderController@deleteEmployee');
 
 	// Service
 	Route::get('/getservices', 'ProviderController@getServices');

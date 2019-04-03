@@ -13,6 +13,8 @@ use Validator;
 use App\Models\Category;
 use App\Models\Service;
 use App\Models\Provider;
+use App\Models\Employee;
+use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Str;
@@ -39,6 +41,12 @@ class ProviderController extends Controller
             $this->request->session()->forget('provider_id');
             Redirect::to('login')->send();
         }
+
+        if($this->request->session()->has('provider_id')){
+            $this->providerid = $this->request->session()->get('provider_id');
+        }else{
+            $this->providerid = Auth::user()->id;
+        }
         
     }
 
@@ -58,11 +66,40 @@ class ProviderController extends Controller
     }
 
     public function moduleTemplate($slug){
+        if($slug =='employee_management'){
+            $role = Role::first();
+            $employees = Employee::with('role')->where('provider_id',$this->providerid)->where('role_id',$role->id)->latest('created_at')->paginate(5);
+            $this->data['employees'] = $employees;
+            $this->data['user_type'] = 'technician';
+            if ($this->request->ajax() || $this->request->method() == 'POST') {
+                $employee_html = View('includes.employee_table', ['employees' => $employees,'user_type'=>'technician'])->render();
+                return response()->json(compact('employee_html'));
+            }
+        }
         return View('pages.modules.'.$slug, $this->data);
     }
 
-    public function temps($slug){
-        return View('pages.modules.'.$slug, $this->data);
+    public function temps($slug,$type){
+        $this->data['user_type'] = $type;
+        if($this->request->session()->has('provider_id')){
+            $id = $this->request->session()->get('provider_id');
+        }else{
+            $id = Auth::user()->id;
+        }
+        $role = Role::where('name',$type)->first();
+        if($role){
+            $employees = Employee::with('role')->where('provider_id',$id)->where('role_id',$role->id)->latest('created_at')->paginate(5);
+            // print_r($this->request->method());exit;
+            if ($this->request->ajax() || $this->request->method() == 'POST') {
+                $employee_html = View('includes.employee_table', ['employees' => $employees,'user_type'=>$type])->render();
+                return response()->json(compact('employee_html'));
+            }
+            $this->data['employees'] = $employees;
+            return View('pages.modules.'.$slug, $this->data);
+        }else{
+            return response()->json(array('success'=>false,'err'=>'Unauthorized'));
+        }
+        
     }
 
     function addCategory(){
@@ -77,6 +114,50 @@ class ProviderController extends Controller
            'message' => 'Category Added Successfully',
            'detail' => $cat
         ));
+    }
+
+    function addEmployee(){
+        if($this->request->session()->get('provider_id') && $this->request->session()->get('provider_id') != ''){
+            $provider_id = $this->request->session()->get('provider_id');
+        }else{
+            $provider_id = Auth::user()->id;
+        }
+        $role = Role::where('name',$this->request->user_type)->first();
+        if($this->request->has('id') && $this->request->id !=''){
+            $emp = Employee::find($this->request->id);
+        }else{
+            $emp = new Employee();
+            $emp->provider_id = $provider_id;
+            $emp->role_id = $role->id;
+        }
+        $emp->fname = $this->request->fname;
+        $emp->lname = $this->request->lname;
+        $emp->dob = $this->request->dob;
+        $emp->job_being = $this->request->job_being;
+        $emp->job_end = $this->request->job_end;
+        $emp->ssn = $this->request->ssn;
+        $emp->phone = $this->request->phone;
+        $emp->address = $this->request->address;
+        $emp->city = $this->request->city;
+        $emp->state = $this->request->state;
+        $emp->zipcode = $this->request->zipcode;
+        if($this->request->hourly_rate_check){
+            $emp->hourly_rate = $this->request->hourly_rate;
+        }
+        $emp->save();
+        $emp = Employee::with('role')->find($emp->id);
+        return response()->json(array(
+           'message' => $this->request->id ? 'Employee Updated Successfully' :  'Employee Added Successfully',
+           'detail' => $emp
+        ));
+    }
+
+    function getEmployee($id){
+        $emp = Employee::with('role')->find($id);
+        return response()->json(array(
+            'message' => 'success',
+            'detail' => $emp
+         ));
     }
 
     function manageService(){
@@ -154,6 +235,14 @@ class ProviderController extends Controller
         $sr->delete();
         return response()->json(array(
             'message' => 'Service Deleted Successfully'
+        ));
+    }
+
+    function deleteEmployee($id){
+        $emp = Employee::find($id);
+        $emp->delete();
+        return response()->json(array(
+            'message' => 'Employee Deleted Successfully'
         ));
     }
 

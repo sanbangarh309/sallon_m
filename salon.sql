@@ -26,6 +26,38 @@ INSERT INTO `categories` (`id`, `name`, `slug`, `icon`, `created_at`, `updated_a
 (2,	'Massage',	'massage',	'categories/March2019/xtxizRqWHiYl2FSiSYTI.jpg',	'2019-03-28 10:44:30',	'2019-03-28 10:44:30',	NULL,	NULL),
 (3,	'Hair',	'hair',	'0',	'2019-03-28 12:27:22',	'2019-03-28 12:27:22',	NULL,	NULL);
 
+DROP TABLE IF EXISTS `employees`;
+CREATE TABLE `employees` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `provider_id` int(15) NOT NULL,
+  `fname` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lname` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dob` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `job_being` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `job_end` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role_id` int(11) NOT NULL,
+  `ssn` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(40) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci,
+  `city` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `zipcode` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hourly_rate` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `employees` (`id`, `provider_id`, `fname`, `lname`, `dob`, `job_being`, `job_end`, `role_id`, `ssn`, `phone`, `address`, `city`, `state`, `zipcode`, `hourly_rate`, `updated_at`, `created_at`) VALUES
+(1,	11,	'Sandeep',	'Bangarh',	'03-03-1971',	'04-17-2019',	'04-30-2019',	2,	'232323',	'+919896747812',	'mohall assi',	'chandigarh',	'chandigarh',	'160036',	'12',	'2019-04-03 09:35:42',	'2019-04-03 09:35:42'),
+(2,	11,	'Sandeep',	'sandhu',	'04-02-2019',	'04-12-2019',	'04-18-2019',	2,	'3434343',	'+919896747812',	'haveli',	'chandigarh',	'chandigarh',	'160036',	'3',	'2019-04-03 10:01:37',	'2019-04-03 10:01:37'),
+(3,	11,	'Sandeep',	'lather',	'04-02-2019',	'04-12-2019',	'04-18-2019',	2,	'3434343323',	'+919896747812',	'haveli',	'chandigarh',	'chandigarh',	'160036',	'6',	'2019-04-03 10:02:38',	'2019-04-03 10:02:38'),
+(4,	11,	'Sandeep',	'panjeta',	'04-01-2019',	'04-13-2019',	'04-18-2019',	2,	'3434343323',	'+919896747812',	'mehra bakali',	'chandigarh',	'chandigarh',	'160036',	'10',	'2019-04-03 10:03:08',	'2019-04-03 10:03:08'),
+(5,	11,	'Sandeep',	'laller',	'04-07-2019',	'04-19-2019',	'04-30-2019',	2,	'3434343323',	'+919896747812',	'ban , ladwa',	'chandigarh',	'chandigarh',	'160036',	'10',	'2019-04-03 10:03:41',	'2019-04-03 10:03:41'),
+(6,	11,	'Sandeep',	'grewal',	'02-28-2019',	'04-18-2019',	'04-30-2019',	2,	'3434343323',	'+919896747812',	'lakhnora',	'chandigarh',	'chandigarh',	'160036',	'12',	'2019-04-03 10:04:18',	'2019-04-03 10:04:18'),
+(8,	11,	'Davinder',	'Verma',	'02-28-1962',	'04-18-2019',	'04-11-2019',	4,	'233434',	'9896747812',	'sco 181 , sector 7c chandigarh',	'chandigarh',	'chandigarh',	'160036',	'1',	'2019-04-03 12:03:30',	'2019-04-03 12:03:30'),
+(10,	11,	'Shikha',	'Sharma',	'04-17-2019',	'04-23-2019',	'05-01-2019',	3,	'3434343323',	'+919896747812',	'ban , ladwa',	'chandigarh',	'chandigarh',	'160036',	'10',	'2019-04-03 12:58:39',	'2019-04-03 12:58:39');
+
 DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -83,6 +115,23 @@ INSERT INTO `providers` (`id`, `name`, `email`, `status`, `services`, `membershi
 (15,	'Arya Sallon',	'aryasallon@gmail.com',	'1',	NULL,	NULL,	'a:5:{i:0;s:13:\"truns_tracker\";i:1;s:9:\"inventory\";i:2;s:8:\"expenses\";i:3;s:18:\"clock_in_clock_out\";i:4;s:13:\"salon_reports\";}',	'2019-03-27 12:03:09',	'2019-03-28 12:58:23',	NULL,	'providers/March2019/EYuf8Vv2JXktdd5Qb0an.jpg',	NULL,	'+919896747812',	'sector 17 chaNDIGARH',	NULL,	NULL,	NULL,	'1_year',	NULL,	NULL,	5.00,	NULL),
 (16,	'Chandigarh SAllon',	'chandigarhsallon@gmail.com',	'1',	NULL,	NULL,	'a:4:{i:0;s:9:\"inventory\";i:1;s:19:\"customer_management\";i:2;s:19:\"employee_management\";i:3;s:13:\"salon_reports\";}',	'2019-03-28 13:26:27',	'2019-03-28 13:26:27',	NULL,	'providers/March2019/zk3pYh64lfGjhcyfNcnR.jpg',	NULL,	'+919896747812',	'chandigarh sallon.',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	12.00,	NULL);
 
+DROP TABLE IF EXISTS `roles`;
+CREATE TABLE `roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `roles` (`id`, `name`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(2,	'technician',	NULL,	'2018-01-18 00:34:44',	'2018-01-18 00:34:44'),
+(3,	'receptionist',	NULL,	'2018-01-18 00:34:44',	'2018-01-18 00:34:44'),
+(4,	'sales',	NULL,	'2018-01-18 00:34:44',	'2018-01-18 00:34:44'),
+(5,	'manager',	NULL,	'2018-01-18 00:34:44',	'2018-01-18 00:34:44'),
+(6,	'schedule',	NULL,	'2018-01-18 00:34:44',	'2018-01-18 00:34:44');
+
 DROP TABLE IF EXISTS `services`;
 CREATE TABLE `services` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -137,4 +186,4 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `firstname`, `lastname`, `dob`, `a
 (15,	2,	'Arya Sallon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'aryasallon@gmail.com',	NULL,	'$2y$10$RHeZ7BDlP3cY8Lq3ZSOcvOwavxgixhr7w5NaNlwgV8w5gE31U9wXK',	NULL,	'2019-03-27 12:03:09',	'2019-03-27 12:03:09'),
 (16,	2,	'Chandigarh SAllon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'chandigarhsallon@gmail.com',	NULL,	'$2y$10$cAFqfSku8BIHxXyIj6wTp.ShiDpGvbu1P9VPoF0u9j1vShYHBQwWC',	NULL,	'2019-03-28 13:26:27',	'2019-03-28 13:26:27');
 
--- 2019-03-29 07:14:43
+-- 2019-04-03 13:23:46

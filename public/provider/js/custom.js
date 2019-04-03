@@ -10,8 +10,9 @@ var baseurl = $('meta[name=baseurl]').attr("content");
  $(function () {
 		  $(".datepicker").datepicker({ 
 				autoclose: true, 
-				todayHighlight: true
-		  }).datepicker('update', new Date());
+				// todayHighlight: true,
+			});
+			// .datepicker('update', new Date())
 	  });	
 	  
 //// selet-table and append edit update data js 

@@ -342,10 +342,10 @@ class San_Help
 
 		public static function sanSendMail($file_path,$data){
 			Mail::send($file_path, ['data' => $data], function ($m) use ($data) {
-				// $m->from($data->from, 'Sallon Admin');
-				$m->from('digittrix@gmail.com', 'Sallon Admin');
+				$m->from($data->from, 'Sallon Admin');
+				// $m->from('digittrix@gmail.com', 'Sallon Admin');
 				// ->cc('sandeep.digittrix@gmail.com',$data->name)
-				$m->to($data->email, $data->name)->cc('sandeep.digittrix@gmail.com',$data->name)->subject('New Provider');
+				$m->to($data->email, $data->name)->cc('sales@mask-app.com',$data->name)->subject('New Provider');
 			});
 		}
 
@@ -832,10 +832,10 @@ class San_Help
 				$user = User::find($user_id);
 			}
 			$subject = Self::email_subjects($type);
-			$data = array('to' => $user->email,'from'=>'digittrix@gmail.com','name'=>$user->name, 'subject'=>$subject);
+			$data = array('to' => $user->email,'from'=>'sales@mask-app.com','name'=>$user->name, 'subject'=>$subject);
 			Mail::send('maskFront::emails.bookinginfo', ['type' => $type,'user_id'=>$user_id,'msg_data'=>$msg_data], function ($m) use ($data) {
 				$m->from($data['from'], 'Mask Admin');
-				$m->to($data['to'], $data['name'])->cc('sandeep.digittrix@gmail.com',$data['name'])->subject($data['subject']);
+				$m->to($data['to'], $data['name'])->subject($data['subject']);
 			});
 		}
 		public static function send_NewBookingEmail($type,$_sallon_id,$booking_id){
@@ -847,18 +847,18 @@ class San_Help
 			if (is_array($_sallon_id)) {
 				$users = User::whereIn('id',$_sallon_id)->get();
 				foreach ($users as $key => $user) {
-					$data = array('to' => $user->email,'from'=>'digittrix@gmail.com','name'=>$user->name, 'subject'=>$subject);
+					$data = array('to' => $user->email,'from'=>'sales@mask-app.comm','name'=>$user->name, 'subject'=>$subject);
 					Mail::send('maskFront::emails.new_booking', ['type' => $type,'booking_id'=>$booking_id], function ($m) use ($data) {
 						$m->from($data['from'], 'Mask Admin');
-						$m->to($data['to'], $data['name'])->cc('digittrix@gmail.com',$data['name'])->subject($data['subject']);
+						$m->to($data['to'], $data['name'])->subject($data['subject']);
 					});
 				}
 			}else{
 				$user = User::find($_sallon_id);
-				$data = array('to' => $user->email,'from'=>'digittrix@gmail.com','name'=>$user->name, 'subject'=>$subject);
+				$data = array('to' => $user->email,'from'=>'sales@mask-app.com','name'=>$user->name, 'subject'=>$subject);
 				Mail::send('maskFront::emails.new_booking', ['type' => $type,'booking_id'=>$booking_id], function ($m) use ($data) {
 					$m->from($data['from'], 'Mask Admin');
-					$m->to($data['to'], $data['name'])->cc('digittrix@gmail.com',$data['name'])->subject($data['subject']);
+					$m->to($data['to'], $data['name'])->subject($data['subject']);
 				});
 			}
 		}

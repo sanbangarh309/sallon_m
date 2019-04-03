@@ -469,7 +469,7 @@ width: 100%;background: url(../images/form-arow.png) no-repeat;background-color:
 .close.select_cat {
 position: absolute;right: 43%;top: -62px;height: 43px;width: 43px;background: #3bb350;border-radius: 50%;color: #fff;opacity: 1;border: 4px #fff solid;font-size: 32px !important;font-weight: normal;z-index: 99999999999;}
 .close.select_cat:hover{ background:none; color:none; z-index:99999999999; position: absolute;}
-.submit_catgry {width: 100%;max-width: 200px;display: block;margin: 0 auto;background: #ddd;font-size: 16px;height: 41px;border: 0px;border-radius: 3px;}
+.submit_catgry {width: 100%;max-width: 200px;display: block;margin: 0 auto;background: #ddd;font-size: 30px;height: 41px;border: 0px;border-radius: 3px;}
 
 /*------FEEDBACK-CSS-------*/
 .back-tohome.col-md-7.expnse-rightbtn {display: flex;}

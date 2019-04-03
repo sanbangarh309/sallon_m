@@ -162,7 +162,7 @@
 													Browse <input type="file" name = "image" hidden>
 											</label>
 									</div>
-									<button type="submit" class="submit_catgry" id="loader_submit_org">Submit Category</button>
+									<button type="submit" class="submit_catgry" id="loader_submit_org">Save</button>
 									<button class="submit_catgry submit_catgry_loader" id="loader_submit">
 										<i class="fa fa-spinner fa-spin"></i><span>Adding..</span>
 									</button>

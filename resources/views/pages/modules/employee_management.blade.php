@@ -8,11 +8,11 @@
 				         <div class="col-md-12">
 						         <a href="index.html" class="Exit_btn d-block d-sm-block d-md-none d-lg-none"><i class="fas fa-home"></i></a>
 								  <div class="filters_byphone">
-								    <a href="{{route('temps','technician')}}" class="Export_btn">Technician</a>
-									<a href="report.html" class="Export_btn">Receptionist</a>
-									<a href="report.html" class="Export_btn">Sale Associate</a>
-									<a href="report.html" class="Export_btn">Manager</a>
-									<a href="report.html" class="Export_btn">Schedule</a>
+								    <a href="{{route('temps',['slug'=>'employees','type'=>'technician'])}}" class="Export_btn">Technician</a>
+									<a href="{{route('temps',['slug'=>'employees','type'=>'receptionist'])}}" class="Export_btn">Receptionist</a>
+									<a href="{{route('temps',['slug'=>'employees','type'=>'sales'])}}" class="Export_btn">Sale Associate</a>
+									<a href="{{route('temps',['slug'=>'employees','type'=>'manager'])}}" class="Export_btn">Manager</a>
+									<a href="{{route('temps',['slug'=>'employees','type'=>'schedule'])}}" class="Export_btn">Schedule</a>
 							     </div>
 								  <div class="back-tohome float-right">
 									 <a href="report.html" class="Export_btn">Print Schedule</a>
@@ -40,86 +40,8 @@
 							   </div>
 					     </div>
 					     <div class="col-md-8">
-						     <div class="appointment_summary-table genrate_customerReport table-responsive">
-							    <table class="table" id="select-table">
-									<thead>
-										<tr>
-											<th>Customer Name</th>
-											<th>Phone#</th>
-											<th>Since</th>
-											<th>#Visit</th>
-											<th>Total spent </th>
-											<th>Reward point</th>
-											<th>Reward level</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-										   <tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-										 <tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-									   
-										<tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-										 <tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-										 <tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-										 <tr>
-											<td>Ashely Thomans</td>
-											<td>402-203-4587</td>
-											<td>11-05-2019</td>
-											<td>50</td>
-											<td>$15000</td>
-											<td>350</td>
-											<td>Gold</td>
-										</tr>
-									</tbody>
-								 </table>
+						     <div class="appointment_summary-table genrate_customerReport table-responsive" id="table_technician">
+							 	@include('includes.employee_table')
 							 </div>
 					    </div>
 				</div>
@@ -129,4 +51,30 @@
     </div>
  </div>
 </div>
+@section('javascript')
+   <script type="text/javascript">
+	 			var token = $('meta[name=csrf-token]').attr("content");
+				var baseurl = $('meta[name=baseurl]').attr("content");
+				let user_type = '{{$user_type}}';
+
+				$('body').on('click', '.pagination a', function(e) {
+					e.preventDefault();
+					$('.loading_').show();
+					var url = $(this).attr('href');
+					getEmployees(url);
+					window.history.pushState("", "", url);
+				});
+				
+				function getEmployees(url){
+					    axios.post(url).then((response) => {
+							let html = '';
+							$('#table_technician').html(response.data.employee_html);
+							$('.loading_').hide();
+						})
+						.catch((error) => {
+									
+						})
+				}
+				</script>
+@endsection
 @endsection
