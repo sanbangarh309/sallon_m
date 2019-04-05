@@ -143,9 +143,8 @@ class San_Help
 	}
 
 	public static function  deleteFiles($data,$slug){
-		$path = 'app/public/';
 		$file = storage_path('app/public/'.$data->image);
-		$thumbfile = storage_path('app/public/'.str_replace('providers',$slug.'/thumbs',$data->image));
+		$thumbfile = storage_path('app/public/'.str_replace($slug,$slug.'/thumbs',$data->image));
 		if(file_exists($file) && is_file($file)){
 			unlink($file);
 		}

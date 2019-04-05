@@ -10,6 +10,7 @@ use App\User;
 use Redirect;
 use San_Help;
 use Validator;
+use App\Models\Module;
 use App\Models\Provider;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -23,7 +24,7 @@ class AdminController extends Controller
         $this->data = array();
         $this->request = app('request');
         $this->page = app('request')->segment(2);
-        $this->data['modules'] = config('sallon.modules');
+        $this->data['modules'] = Module::all()->toArray();
         // echo '<pre>';print_r($this->data['modules']);exit;
         // $action = $this->request->route()->getAction();
         if(isset(Auth::user()->id) && Auth::user()->id != 1){

@@ -60,7 +60,14 @@ Route::namespace('Provider')->group(function () {
 	// Employee
 	Route::post('/addemployee', 'ProviderController@addEmployee');
 	Route::get('/employee/{id}', 'ProviderController@getEmployee');
+	Route::post('/addskills', 'ProviderController@addSkills');
 	Route::delete('/employee/{id}', 'ProviderController@deleteEmployee');
+
+	// Appoinment
+	Route::post('/addappointment', 'ProviderController@addAppointment');
+	Route::put('/updateappointment', 'ProviderController@updateAppointment');
+	Route::get('/booking/{id}', 'ProviderController@getAppointment');
+	Route::delete('/booking/{id}', 'ProviderController@deleteAppointment');
 
 	// Service
 	Route::get('/getservices', 'ProviderController@getServices');
