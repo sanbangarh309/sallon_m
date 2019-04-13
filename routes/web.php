@@ -69,6 +69,17 @@ Route::namespace('Provider')->group(function () {
 	Route::get('/booking/{id}', 'ProviderController@getAppointment');
 	Route::delete('/booking/{id}', 'ProviderController@deleteAppointment');
 
+	// Clock in Clock out
+	Route::get('/clock/{user}', 'ProviderController@Clock')->name('user_chkin');
+	Route::post('/chk_mobile', 'ProviderController@chkMobile')->name('chk_mobile');
+	Route::get('/window/{type}/{id}', 'ProviderController@checkInWindow')->name('checkin_window');
+	Route::get('/new_customer/{phone}', 'ProviderController@newCustomer')->name('new_customer');
+	Route::get('/attendence', 'ProviderController@attendence')->name('attendence');
+	Route::post('/change_clock_status', 'ProviderController@changeClockStatus')->name('change_clock_status');
+	Route::post('/create_update_appointmemt', 'ProviderController@createOrUpdateAppointment')->name('create_update_appointmemt');
+	
+	
+
 	// Service
 	Route::get('/getservices', 'ProviderController@getServices');
 	Route::get('/service/{id}', 'ProviderController@getService');

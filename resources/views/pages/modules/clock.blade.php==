@@ -1,0 +1,107 @@
+@php($page = 'Clock In Clock Out')
+@extends('layouts.app')
+@section('main-content')
+     <div class="Saloon_web_wrapper" data-parallax="scroll" style="background:url({{url('public/provider/images/salon-staff2.png')}});">
+       <div class="sallon_body_content"><!--SALLON-BODY-CONTENT-START-HERE-->  
+	       <div class="container">
+		         <div class="row">
+			        <div class="col col-md-12 col-lg-12">
+					    <ul class="sallon-staff-list">
+							@foreach(App\Models\Employee::where('provider_id',$providerid)->get() as $emp)
+							  @php($emp->image = url('storage/app/public/'.str_replace('employees','employees/thumbs',$emp->image)))
+						    <li><div class="staff_listng">
+							     <input type="checkbox"  name="staff">
+								<label class="staff_label-list"> 
+								<div class="staff_img">
+								<span class="staff_count">1</span>
+								 <img src="{{$emp->image}}" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>{{$emp->fname}} {{$emp->lname}}</h2>
+								  <span class="clockin_time"><i class="far fa-clock"></i>{{$emp->created_at->format('H:i a')}}</span>
+									<h3>Self Clocked In</h3>
+								 </div></label>
+								 </div>
+						    </li>
+								@endforeach
+						</ul>
+						<ul class="sallon-staff-list uncloked_staff">
+						    <li>
+							  <div class="staff_listng">
+							     <input type="checkbox"  name="staff">
+								<label class="staff_label-list"> 
+								<div class="staff_img">
+								<img src="images/staff.jpg" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>Vicky Nguyen</h2>
+								   <span class="clockin_time"><i class="far fa-clock"></i>10:06 AM</span>
+								 </div></label>
+								 </div>
+						    </li>
+							 <li><div class="staff_listng">
+							     <input type="checkbox"  name="staff">
+								<label class="staff_label-list"> 
+								<div class="staff_img">
+								<img src="images/staff1.jpg" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>Khai Phan</h2>
+								   <span class="clockin_time"><i class="far fa-clock"></i>10:06 AM</span>
+								 </div></label>
+								 </div>
+						    </li>
+							 <li><div class="staff_listng">
+							    <input type="checkbox"  name="staff">
+								<label class="staff_label-list"> 
+								<div class="staff_img">
+								 <img src="images/staff2.jpg" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>Amy Nguyen</h2>
+								   <span class="clockin_time"><i class="far fa-clock"></i>10:06 AM</span>
+								  </div></label>
+								 </div>
+						    </li>
+						    <li><div class="staff_listng">
+							     <input type="checkbox"  name="staff">
+								<label class="staff_label-list">
+								  <div class="staff_img">
+								   <img src="images/staff4.png" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>Lisa Ngo</h2>
+								   <span class="clockin_time"><i class="far fa-clock"></i>10:06 AM</span>
+								 </div>
+								 </label>
+								 </div>
+						    </li>
+							 <li><div class="staff_listng">
+							     <input type="checkbox"  name="staff">
+								<label class="staff_label-list"> <div class="staff_img">
+								<img src="images/staff4.png" alt="appointment" class="rounded-circle"></div>
+								 <div class="profile_deatils">
+ 								   <h2>Kim Ngo</h2>
+								   <span class="clockin_time"><i class="far fa-clock"></i>10:06 AM</span>
+								 </div>
+								 </label>
+								 </div>
+						    </li>
+						</ul>
+						
+						
+						<div class="staff-timingclocks">
+						  <ul class="time_lists_btn">
+						  <li><a href="{{url('/')}}" class="home_in"><span class="homeicvon"><i class="fas fa-home"></i></span></a></li> 
+						     <li><a href="" class="clock_in">Clock In</a></li> 
+							 <li><a href="" class="clock_time">10:15:30 AM</a></li>
+							   <li><a href="" class="clock_out">Clock Out</a></li>
+						  </ul>
+						</div>
+					</div>
+			     </div>
+		   </div>
+	   </div><!--SALLON-BODY-CONTENT-CLOSE-HERE--> 
+	   
+    </div>
+		@section('javascript')
+   	<script type="text/javascript">
+
+		</script>
+@endsection
+@endsection

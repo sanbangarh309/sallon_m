@@ -41,7 +41,7 @@
 					     </div>
 					     <div class="col-md-8">
 						     <div class="appointment_summary-table genrate_customerReport table-responsive" id="table_technician">
-							 	@include('includes.employee_table')
+							 	@include('includes.employee_management_list')
 							 </div>
 					    </div>
 				</div>
@@ -68,7 +68,7 @@
 				function getEmployees(url){
 					    axios.post(url).then((response) => {
 							let html = '';
-							$('#table_technician').html(response.data.employee_html);
+							$('#table_technician').html(response.data.list_html);
 							$('.loading_').hide();
 						})
 						.catch((error) => {

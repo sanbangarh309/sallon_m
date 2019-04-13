@@ -1,26 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/responsive.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
-    <title>Saloon web application</title>
-</head>
-
-<body>
-    <div class="Saloon_web_wrapper" data-parallax="scroll" style="background:url(images/bg1.png);">
+@php($page = 'Customer Report')
+@extends('layouts.app')
+@section('main-content')
+    <div class="Saloon_web_wrapper" data-parallax="scroll" style="background:url({{url('public/provider/images/bg1.png')}});">
         <div class="customrReportGenrate_summary" id="GenrateCustomer_report">
             <div class="container-fluid">
                 <div class="filter_lists row customer_reportgfenrate">
 				      <div class="back-tohome d-block d-sm-block d-md-none d-lg-none">
-					     <a href="index.html" class="Exit_btn"><i class="fas fa-home"></i></a>
+					     <a href="{{route('template','customer_management')}}" class="Exit_btn"><i class="fas fa-home"></i></a>
 					   </div>
                     <div class="col-md-4 col-lg-3">
 					   <div class="genrate_csreports">
@@ -169,98 +155,19 @@
                     </div>
                     <div class="col-md-5 col-lg-6">
 					  <div class="total-cstomer">
-					     <h2>Total: 1500 Cutsomers</h2>
+					     <h2>Total: {{App\Models\Appointment::where('provider_id',app('request')->session()->get('provider_id'))->count()}} Cutsomers</h2>
 						 <div class="filters_byphone float-right">
 						    <a href="report.html" class="Export_btn ourreport">Export to Excel</a>
 						</div>
 					  </div>
                         
-				   <div class="appointment_summary-table genrate_customerReport table-responsive">
-                      <table class="table" id="select-table">
-                            <thead>
-                                <tr>
-                                    <th>Customer Name</th>
-                                    <th>Phone#</th>
-									<th>Since</th>
-                                    <th>#Visit</th>
-                                    <th>Total spent </th>
-                                    <th>Reward point</th>
-									<th>Reward level</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-                                   <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-								 <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-                               
-							    <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-								 <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-								 <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-								 <tr>
-								    <td>Ashely Thomans</td>
-									<td>402-203-4587</td>
-									<td>11-05-2019</td>
-									<td>50</td>
-									<td>$15000</td>
-                                    <td>350</td>
-                                    <td>Gold</td>
-								</tr>
-                             
-                            </tbody>
-                        </table>
-                    </div>
+				   <div class="appointment_summary-table genrate_customerReport table-responsive" id="customer_list_table">
+							 @include('includes.customer_report_list')
+           </div>
 					</div>
 					 <div class="col-md-3 col-lg-3">
 					   <div class="back-tohome d-none d-sm-none d-md-block d-lg-block">
-					     <a href="index.html" class="Exit_btn"><i class="fas fa-home"></i></a>
+					     <a href="{{route('template','customer_management')}}" class="Exit_btn"><i class="fas fa-home"></i></a>
 					   </div>
                        <div class="genrate_csreports_right">
 						  <h3>Customer Groups</h3>
@@ -281,37 +188,47 @@
     </div>
  </div>
 </div>
+@section('javascript')
+   <script type="text/javascript">
+	  var token = $('meta[name=csrf-token]').attr("content");
+		var baseurl = $('meta[name=baseurl]').attr("content");
+		let fields = ['fname','lname','phone','appointment_date','note','id','email'];
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/parallax.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-    
-    <script>
-	
+		// $('body').on('click', '.pagination a', function(e) {
+		// 	e.preventDefault();
+		// 	$('.loading_').show();
+		// 	var url = $(this).attr('href');
+		// 	getCustomers(url);
+		// 	window.history.pushState("", "", url);
+		// });
+					
+		// function getCustomers(url){
+		// 	axios.post(url).then((response) => {
+		// 			$('#customer_list_table').html(response.data.customers_html);
+		// 			$('.loading_').hide();
+		// 	})
+		// 	.catch((error) => {
+										
+		// 	})
+		// }
   $(document).ready(function(){
   $("#Open_frame").click(function(){
-    $(".custom-radios").slideToggle("slow");
-	$("i", this).toggleClass("fas fa-angle-up fas fa-angle-down");
+    $(".custom-radios").toggle("slow");
+		$("i", this).toggleClass("fas fa-angle-up fas fa-angle-down");
   });
 });
 
-	
-	
-	
-	
-      $(function () {
-		  $(".datepicker").datepicker({ 
-				autoclose: true, 
-				todayHighlight: true
-		  }).datepicker('update', new Date());
+$('#customer_list_table').on('click', '#select-table tbody tr', function(event) {
+  $(this).addClass('highlight').siblings().removeClass('highlight');
+  $('.edit_employeee-detail.row').addClass('open_field').siblings().removeClass('open_field');
+});
 
-	  });
+$(function () {
+	$(".datepicker").datepicker({ 
+		autoclose: true, 
+		todayHighlight: true
+	}).datepicker('update', new Date());
+});
 </script>
-</body>
-
-</html>
+@endsection
+@endsection

@@ -46,11 +46,11 @@
 		         <div class="row">
 			        <div class="col col-md-12 col-lg-12">
 					    <ul class="sallon_feature_list">
-							@foreach($ownmodules as $module)
-								@php($name = $modules[$module]['name'])
-								@php($img = $modules[$module]['image'])
-								@if(isset($name))
-									<li><a href="{{route('template',$module)}}">
+							@foreach($modules as $module)
+								@if(in_array($module['name'],$ownmodules))
+								@php($name = $module['label'])
+								@php($img = $module['image'])
+									<li><a href="{{route('template',$module['name'])}}">
 										<span class="appont_img"><img src="{{url('public/provider/images/'.trim($img))}}" alt="{{$name}}"></span>
 										<h2>{{$name}}</h2>
 										</a>

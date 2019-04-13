@@ -16,7 +16,9 @@ use App\Models\Service;
 use App\Models\Provider;
 use App\Models\Employee;
 use App\Models\Appointment;
+use App\Models\Booking;
 use App\Models\Clock;
+use App\Models\Attendence;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -259,6 +261,7 @@ class ProviderController extends Controller
             'detail' => $emp
          ));
     }
+  
 
     function addAppointment(){
           $validator = Validator::make($this->request->all(), [
@@ -288,8 +291,9 @@ class ProviderController extends Controller
         $user = User::create([
             'name' => $this->request->fname,
             'email' => $this->request->email,
+            'phone' => $this->request->phone,
             'role_id' => 7, 
-            'password' => Hash::make($this->request->email),
+            'password' => Hash::make($this->request->phone),
         ]);
         $apnt->user_id = $user->id;
         $apnt->save();
@@ -312,7 +316,7 @@ class ProviderController extends Controller
     }
 
     function updateAppointment(){
-        $validator = Validator::make($this->request->all(), [
+          $validator = Validator::make($this->request->all(), [
             'id' => 'required',
           ]);
           if ($validator->fails()) {
@@ -404,6 +408,168 @@ class ProviderController extends Controller
             'message' => 'success',
             'detail' => $service
          ));
+    }
+
+    function Clock($type){
+        $this->data['user_type'] = $type; 
+        return View('includes.user_clock', $this->data);
+    }
+
+    function chkMobile(){
+        $validator = Validator::make($this->request->all(), [
+            'mobile' => 'required',
+            'type' => 'required'
+        ]);
+        if ($validator->fails()) {
+            $error = $validator->errors()->first();
+            return response()->json([
+              'success' => false,
+              'message' => $error
+            ]);
+        }
+        if($this->request->type == 'employee'){
+            $employee = Employee::where('phone',trim($this->request->mobile))->first();
+            if($employee){
+                $id = $employee->id;
+            }
+        }
+        if($this->request->type == 'customer'){
+            $customer = User::where('phone',trim($this->request->mobile))->first();
+            if($customer){
+                $id = $customer->id;
+            }else{
+                return response()->json(array(
+                    'success' => true,
+                    'redirect_uri' => route('new_customer',$this->request->mobile),
+                    'message' => 'Redirecting..'
+                )); 
+            }
+        }
+        if(isset($id)){
+            $attnsdt = Attendence::where('user_id',$id)->where('status','in')->first();
+            if(!$attnsdt){ 
+                $attn = new Attendence();
+                $attn->user_id = $id;
+                $attn->status = 'in';
+                $attn->type = $this->request->type;
+                $attn->provider_id = $this->providerid;
+                // echo '<pre>';print_r($attn->toArray());exit;
+                $attn->save();
+                session(['clock_in_user' => $attn->toArray()]);
+                return response()->json(array(
+                    'success' => true,
+                    'redirect_uri' => route('checkin_window',['type'=>$this->request->type,'id'=>$id]),
+                    'message' => 'Clocked In Successfully'
+                ));
+            }else{
+                return response()->json(array(
+                    'success' => false,
+                    'message' => 'Already Clocked In'
+                ));
+            }
+            
+        }
+        
+        return response()->json([
+            'success' => false,
+            'message' => 'Unauthorized'
+          ]);
+    }
+
+    function newCustomer($phone){
+        $this->data['mobile'] = $phone;
+        return View('includes.new_customer', $this->data);
+    }
+
+    function attendence(){
+        $this->data['emp_users'] = Attendence::with('employees')->where('provider_id',$this->providerid)->where('status','in')->where('type','employee')->get();
+        $this->data['cus_users'] = Attendence::with('customers')->where('provider_id',$this->providerid)->where('status','in')->where('type','customer')->get();
+        // echo '<pre>';print_r($this->data['emp_users']);exit;
+        return View('pages.modules.attendence', $this->data);
+    }
+
+    function changeClockStatus(){
+        if($this->request->has('customers') && $this->request->customers !=''){
+            foreach($this->request->customers as $cus){
+                $attn = Attendence::find($cus);  
+                if($attn){
+                    $attn->status = $this->request->status;
+                    $attn->save();
+                }
+            }
+        }
+
+        if($this->request->has('employees') && $this->request->employees !=''){
+            foreach($this->request->employees as $emp){
+                $attn = Attendence::find($emp);  
+                if($attn){
+                    $attn->status = $this->request->status;
+                    $attn->save();
+                }
+            }
+        }
+
+        return response()->json(array(
+            'success' => false,
+            'message' => 'Clocked Out Successfully'
+        ));
+    }
+    
+    function checkInWindow($type,$id){
+        $this->request->session()->forget('clock_in_user');
+        // if(!isset($this->request->session()->get('clock_in_user')->id)){
+        //     return redirect('')->intended('login');
+        // }
+        // echo '<pre>';print_r($this->request->session()->get('clock_in_user'));exit;
+        // if($type =='customer'){
+        //     $this->data['user'] = User::find($id);
+        // }
+        if($type =='employee'){
+            $this->data['user'] = Employee::find($id);
+            $this->data['attendent'] = Attendence::where('user_id',$id)->latest()->first();
+        }
+        $this->data['usertype'] = $type;
+        $this->data['userid'] = $id;
+        // echo '<pre>';print_r($this->data);exit;
+        // $this->data['clock_in_user'] = $this->request->session()->get('clock_in_user');
+        return View('includes.'.$type.'_window', $this->data);
+    }
+
+    function createOrUpdateAppointment(){
+        $validator = Validator::make($this->request->all(), [
+            'type' => 'required',
+            'userid' => 'required',
+            'services' => 'required|array'
+        ]);
+        if ($validator->fails()) {
+            $error = $validator->errors()->first();
+            return response()->json([
+              'success' => false,
+              'message' => $error
+            ]);
+        }
+        // echo '<pre>';print_r($this->request->all());exit;
+        $user = User::find($this->request->userid);
+        if($user){
+            $apnt = new Appointment();
+            $apnt->user_id = $user->id;
+            $apnt->fname = $user->firstname;
+            $apnt->lname = $user->lastname;
+            $apnt->phone = $user->phone;
+            $apnt->services = serialize($this->request->services);
+            $apnt->appointment_date = date("Y-m-d");
+            $apnt->save();
+            return response()->json(array(
+                'success' => true,
+                'message' => 'User Clocked In Successfully'
+            ));
+        }else{
+            return response()->json(array(
+                'success' => false,
+                'message' => 'Something Went wrong'
+            ));
+        }
+        
     }
 
     function deleteService($id){

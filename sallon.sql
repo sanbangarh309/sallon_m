@@ -22,8 +22,7 @@ CREATE TABLE `appointments` (
   `type` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `phone` (`phone`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `appointments` (`id`, `provider_id`, `user_id`, `fname`, `lname`, `phone`, `note`, `employees`, `services`, `appointment_date`, `type`, `created_at`, `updated_at`) VALUES
@@ -33,17 +32,44 @@ INSERT INTO `appointments` (`id`, `provider_id`, `user_id`, `fname`, `lname`, `p
 (12,	11,	23,	'Davinder',	'Verma',	'9896747812',	'test note three',	'a:1:{i:0;s:1:\"3\";}',	'a:1:{i:0;s:1:\"8\";}',	'2019-04-09',	NULL,	'2019-04-05 04:47:55',	'2019-04-05 04:47:55'),
 (13,	11,	24,	'Jyoti',	'Sharma',	'6777676767',	'test note four',	'a:1:{i:0;s:1:\"4\";}',	'a:1:{i:0;s:1:\"9\";}',	'2019-04-08',	NULL,	'2019-04-05 04:48:21',	'2019-04-05 04:48:21'),
 (14,	11,	25,	'Gurinder',	'Sandhu',	'9896747834',	'test note five',	'a:1:{i:0;s:1:\"5\";}',	'a:1:{i:0;s:2:\"12\";}',	'2019-04-26',	NULL,	'2019-04-05 04:48:48',	'2019-04-05 04:48:48'),
-(15,	11,	26,	'new user',	'Sandhu',	'343443343434',	'new user test',	'a:1:{i:0;s:1:\"5\";}',	'a:1:{i:0;s:2:\"12\";}',	'2019-04-17',	NULL,	'2019-04-05 08:00:01',	'2019-04-05 08:00:01');
+(15,	11,	26,	'new user',	'Sandhu',	'343443343434',	'new user test',	'a:1:{i:0;s:1:\"5\";}',	'a:1:{i:0;s:2:\"12\";}',	'2019-04-17',	NULL,	'2019-04-05 08:00:01',	'2019-04-05 08:00:01'),
+(16,	11,	29,	'test first',	'tets second',	'+8765269578',	'sdsdsd',	'a:1:{i:0;s:1:\"2\";}',	'a:1:{i:0;s:1:\"7\";}',	'2019-04-24',	NULL,	'2019-04-13 09:53:50',	'2019-04-13 09:53:50'),
+(17,	11,	30,	'test first',	'tets second',	'+6573482193',	'dsdsdsd',	'a:1:{i:0;s:1:\"1\";}',	'a:1:{i:0;s:1:\"8\";}',	'2019-04-23',	NULL,	'2019-04-13 10:23:57',	'2019-04-13 10:23:57'),
+(18,	11,	31,	'test hair',	'cut',	'+6573482194',	'bbvbvb',	'a:1:{i:0;s:1:\"5\";}',	'a:2:{i:0;s:2:\"11\";i:1;s:1:\"8\";}',	'2019-04-18',	NULL,	'2019-04-13 10:26:20',	'2019-04-13 10:26:20'),
+(22,	NULL,	23,	NULL,	NULL,	'9896747812',	NULL,	NULL,	'a:1:{i:0;s:1:\"8\";}',	'2019-04-13',	NULL,	'2019-04-13 12:01:07',	'2019-04-13 12:01:07');
 
 DROP TABLE IF EXISTS `attendence`;
 CREATE TABLE `attendence` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(15) DEFAULT NULL,
-  `employee_id` int(15) DEFAULT NULL,
   `provider_id` int(15) NOT NULL,
-  `user_status` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'out',
-  `employee_status` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'out',
+  `status` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'out',
+  `type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `in_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `out_time` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `attendence` (`id`, `user_id`, `provider_id`, `status`, `type`, `in_time`, `out_time`, `created_at`, `updated_at`) VALUES
+(6,	20,	11,	'out',	'customer',	'2019-04-13 11:58:17',	NULL,	'2019-04-13 11:58:17',	'2019-04-13 11:58:17'),
+(7,	20,	11,	'out',	'customer',	'2019-04-13 11:59:22',	NULL,	'2019-04-13 11:59:22',	'2019-04-13 11:59:22'),
+(8,	23,	11,	'out',	'customer',	'2019-04-13 12:01:16',	NULL,	'2019-04-13 12:01:16',	'2019-04-13 12:01:16'),
+(9,	1,	11,	'out',	'employee',	'2019-04-13 12:16:50',	NULL,	'2019-04-13 12:16:50',	'2019-04-13 12:16:50'),
+(10,	1,	11,	'out',	'employee',	'2019-04-13 12:18:55',	NULL,	'2019-04-13 12:18:55',	'2019-04-13 12:18:55'),
+(11,	1,	11,	'out',	'employee',	'2019-04-13 12:19:50',	NULL,	'2019-04-13 12:19:50',	'2019-04-13 12:19:50');
+
+DROP TABLE IF EXISTS `bookings`;
+CREATE TABLE `bookings` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `provider_id` int(11) DEFAULT NULL,
+  `info` mediumtext COLLATE utf8mb4_unicode_ci,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `book_date` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -197,11 +223,12 @@ CREATE TABLE `providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `providers` (`id`, `name`, `email`, `status`, `services`, `membership`, `modules`, `created_at`, `updated_at`, `assistants`, `avatar`, `description`, `phone`, `address`, `latitude`, `longitude`, `city_country`, `duration`, `device_token`, `banner`, `commission`, `plan_price`) VALUES
-(11,	'Hair Master',	'sandeep.digittrix@gmail.com',	'1',	NULL,	NULL,	'a:6:{i:0;s:11:\"appointment\";i:1;s:13:\"truns_tracker\";i:2;s:9:\"inventory\";i:3;s:5:\"clock\";i:4;s:19:\"customer_management\";i:5;s:19:\"employee_management\";}',	'2019-03-27 06:09:27',	'2019-04-05 09:49:56',	NULL,	'providers/March2019/VTucLo1npaPAFAKnCv5U.jpg',	NULL,	'+919896747812',	'sector 7c chandigarh , india',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	12.00,	NULL),
+(11,	'Hair Master',	'sandeep.digittrix@gmail.com',	'1',	NULL,	NULL,	'a:16:{i:0;s:11:\"appointment\";i:1;s:13:\"point_of_sale\";i:2;s:13:\"truns_tracker\";i:3;s:14:\"t_email_mrktng\";i:4;s:9:\"inventory\";i:5;s:8:\"expenses\";i:6;s:10:\"gift_cards\";i:7;s:12:\"reward_cards\";i:8;s:5:\"clock\";i:9;s:9:\"acnt_stng\";i:10;s:22:\"transaction_management\";i:11;s:18:\"customer_feedbacks\";i:12;s:19:\"customer_management\";i:13;s:19:\"employee_management\";i:14;s:13:\"salon_reports\";i:15;s:7:\"payroll\";}',	'2019-03-27 06:09:27',	'2019-04-10 16:08:36',	NULL,	'providers/March2019/VTucLo1npaPAFAKnCv5U.jpg',	NULL,	'+919896747812',	'sector 7c chandigarh , india',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	12.00,	NULL),
 (12,	'Beauty Sallon',	'sandeep.digittrix1@gmail.com',	'1',	NULL,	NULL,	'a:2:{i:0;s:13:\"point_of_sale\";i:1;s:9:\"acnt_stng\";}',	'2019-03-27 07:17:09',	'2019-03-27 07:25:34',	NULL,	'providers/March2019/Df6JfqkSkE9eXXqUeBzo.jpg',	NULL,	'+919896747812',	'sector 7 c chandigarh , india',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	10.00,	NULL),
 (13,	'Cutting Hair',	'shikha.digittrix@gmail.com',	'1',	NULL,	NULL,	'a:6:{i:0;s:11:\"appointment\";i:1;s:14:\"t_email_mrktng\";i:2;s:9:\"inventory\";i:3;s:12:\"reward_cards\";i:4;s:19:\"customer_management\";i:5;s:19:\"employee_management\";}',	'2019-03-27 11:55:47',	'2019-04-05 09:45:46',	NULL,	'providers/March2019/nIe1UK1EoFyQgnoANXMb.jpeg',	NULL,	'+919896747812',	'mohalla assi',	NULL,	NULL,	NULL,	'1_month',	NULL,	NULL,	12.00,	NULL),
 (14,	'Hair Dry',	'sandeep.digittrix2@gmail.com',	'1',	NULL,	NULL,	'a:4:{i:0;s:19:\"customer_management\";i:1;s:19:\"employee_management\";i:2;s:13:\"salon_reports\";i:3;s:7:\"payroll\";}',	'2019-03-27 11:58:53',	'2019-03-27 11:58:53',	NULL,	'providers/March2019/KjjF3X6DiLbZ4EXO5vL1.jpg',	NULL,	'+919896747812',	'sector 17 chandigarh',	NULL,	NULL,	NULL,	'1_year',	NULL,	NULL,	12.00,	NULL),
-(16,	'Chandigarh SAllon',	'chandigarhsallon@gmail.com',	'1',	NULL,	NULL,	'a:4:{i:0;s:9:\"inventory\";i:1;s:19:\"customer_management\";i:2;s:19:\"employee_management\";i:3;s:13:\"salon_reports\";}',	'2019-03-28 13:26:27',	'2019-03-28 13:26:27',	NULL,	'providers/March2019/zk3pYh64lfGjhcyfNcnR.jpg',	NULL,	'+919896747812',	'chandigarh sallon.',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	12.00,	NULL);
+(16,	'Chandigarh SAllon',	'chandigarhsallon@gmail.com',	'1',	NULL,	NULL,	'a:4:{i:0;s:9:\"inventory\";i:1;s:19:\"customer_management\";i:2;s:19:\"employee_management\";i:3;s:13:\"salon_reports\";}',	'2019-03-28 13:26:27',	'2019-03-28 13:26:27',	NULL,	'providers/March2019/zk3pYh64lfGjhcyfNcnR.jpg',	NULL,	'+919896747812',	'chandigarh sallon.',	NULL,	NULL,	NULL,	'3_month',	NULL,	NULL,	12.00,	NULL),
+(28,	'Arya Sallon',	'aryasallon@gmail.com',	'1',	NULL,	NULL,	'a:8:{i:0;s:11:\"appointment\";i:1;s:13:\"point_of_sale\";i:2;s:13:\"truns_tracker\";i:3;s:9:\"inventory\";i:4;s:8:\"expenses\";i:5;s:5:\"clock\";i:6;s:19:\"customer_management\";i:7;s:19:\"employee_management\";}',	'2019-04-13 04:18:46',	'2019-04-13 04:18:46',	NULL,	'providers/April2019/4tcPoXVIZrmhDwc2RSQV.jpeg',	NULL,	'9896778123',	'sco 186 sector 7c chandigarh',	NULL,	NULL,	NULL,	'1_month',	NULL,	NULL,	NULL,	NULL);
 
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
@@ -261,6 +288,7 @@ CREATE TABLE `users` (
   `state` varchar(40) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `zipcode` varchar(40) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_plan` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'Silver',
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -271,19 +299,23 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `users` (`id`, `role_id`, `name`, `firstname`, `lastname`, `dob`, `address`, `city`, `state`, `zipcode`, `email`, `user_plan`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1,	1,	'Superadmin',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'superadmin_sallon@gmail.com',	'Silver',	NULL,	'$2y$10$a.ZJ3CbfbRy.ILsj4O7lI.N0Hf3BD9eHah1A1XFPvRLB5QfM1p0A6',	'D88oIp5ZWbBTWq86V9K4bdQVtWdYUCPNFidQmz92M9zjcH593WU2DxfLBrqu',	'2019-03-20 04:53:58',	'2019-03-20 04:53:58'),
-(11,	2,	'Hair Master',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix@gmail.com',	'Silver',	NULL,	'$2y$10$1yueZtBDyi9z6dvbsFVLzemmH1ifgFFivZtagAfWtu9xOW7N9RwzO',	NULL,	'2019-03-27 06:09:27',	'2019-03-27 06:09:27'),
-(12,	2,	'Beauty Sallon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix1@gmail.com',	'Silver',	NULL,	'$2y$10$gyz0AIccZdiMxrg85Te8T.zuP9O/FGUvEE7t1YnfhdEADk4gQeQEu',	NULL,	'2019-03-27 07:17:09',	'2019-03-27 07:17:09'),
-(13,	2,	'Cutting Hair',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'shikha.digittrix@gmail.com',	'Silver',	NULL,	'$2y$10$.J52aTMoThEl0GkqfAdWK.1z5SlaWdtEufnYsBK6yEf0uJZCYtrWa',	NULL,	'2019-03-27 11:55:47',	'2019-03-27 11:55:47'),
-(14,	2,	'Hair Dry',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix2@gmail.com',	'Silver',	NULL,	'$2y$10$khsvhvlRvacIj7/2XxbqBuhkJvkePSqQ.frgOyvZHkLkWJE5x9grG',	NULL,	'2019-03-27 11:58:53',	'2019-03-27 11:58:53'),
-(16,	2,	'Chandigarh SAllon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'chandigarhsallon@gmail.com',	'Silver',	NULL,	'$2y$10$cAFqfSku8BIHxXyIj6wTp.ShiDpGvbu1P9VPoF0u9j1vShYHBQwWC',	NULL,	'2019-03-28 13:26:27',	'2019-03-28 13:26:27'),
-(20,	7,	'Sandeep',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix3@gmail.com',	'Silver',	NULL,	'$2y$10$uKd73tqiLpgceumTNURfdugTVhw4CBT9ZeUyrQROhrcWe1DekA5wa',	NULL,	'2019-04-04 13:08:30',	'2019-04-04 13:08:30'),
-(21,	7,	'Shikha',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test1@gmail.com',	'Silver',	NULL,	'$2y$10$flnRnfzbMoGaUNjTlmaXyuIghdELjiZfSb5EtJ/gk/HhzWi5eMpkO',	NULL,	'2019-04-05 04:47:04',	'2019-04-05 04:47:04'),
-(22,	7,	'Sandeep',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test2@gmail.com',	'Silver',	NULL,	'$2y$10$reO0t.8sTAepXCVPnKy2n.cay1pGqPIE0ulA68.mqBmq0vGMvutb2',	NULL,	'2019-04-05 04:47:30',	'2019-04-05 04:47:30'),
-(23,	7,	'Davinder',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test3@gmail.com',	'Silver',	NULL,	'$2y$10$qeR0el.P7LltOmLliBYVVu1tLv6fANg12BeQwIhuFhxSBWOdEZahm',	NULL,	'2019-04-05 04:47:55',	'2019-04-05 04:47:55'),
-(24,	7,	'Jyoti',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test4@gmail.com',	'Silver',	NULL,	'$2y$10$R9aku7ZE3AYXfem3h.DSo.5BAGuQC8WgD5lyN7efwchI/MjkOahYO',	NULL,	'2019-04-05 04:48:21',	'2019-04-05 04:48:21'),
-(25,	7,	'Gurinder',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test5@gmail.com',	'Silver',	NULL,	'$2y$10$pDn4nOI4C/TVLSDeFFWPROlFYvzDdn6wH0Nelkvq5SFcFEwfw6V.G',	NULL,	'2019-04-05 04:48:48',	'2019-04-05 04:48:48'),
-(26,	7,	'new user',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'new_appointment@gmail.com',	'Silver',	NULL,	'$2y$10$XEj8hdZixzgB43Nsmo/zX.6k/FnmTtIP3o6mGzlyVCeIW6ei8YB92',	NULL,	'2019-04-05 08:00:01',	'2019-04-05 08:00:01');
+INSERT INTO `users` (`id`, `role_id`, `name`, `firstname`, `lastname`, `dob`, `address`, `city`, `state`, `zipcode`, `email`, `phone`, `user_plan`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1,	1,	'Superadmin',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'superadmin_sallon@gmail.com',	'',	'Silver',	NULL,	'$2y$10$a.ZJ3CbfbRy.ILsj4O7lI.N0Hf3BD9eHah1A1XFPvRLB5QfM1p0A6',	'D88oIp5ZWbBTWq86V9K4bdQVtWdYUCPNFidQmz92M9zjcH593WU2DxfLBrqu',	'2019-03-20 04:53:58',	'2019-03-20 04:53:58'),
+(11,	2,	'Hair Master',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix@gmail.com',	'',	'Silver',	NULL,	'$2y$10$1yueZtBDyi9z6dvbsFVLzemmH1ifgFFivZtagAfWtu9xOW7N9RwzO',	NULL,	'2019-03-27 06:09:27',	'2019-03-27 06:09:27'),
+(12,	2,	'Beauty Sallon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix1@gmail.com',	'',	'Silver',	NULL,	'$2y$10$gyz0AIccZdiMxrg85Te8T.zuP9O/FGUvEE7t1YnfhdEADk4gQeQEu',	NULL,	'2019-03-27 07:17:09',	'2019-03-27 07:17:09'),
+(13,	2,	'Cutting Hair',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'shikha.digittrix@gmail.com',	'',	'Silver',	NULL,	'$2y$10$.J52aTMoThEl0GkqfAdWK.1z5SlaWdtEufnYsBK6yEf0uJZCYtrWa',	NULL,	'2019-03-27 11:55:47',	'2019-03-27 11:55:47'),
+(14,	2,	'Hair Dry',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix2@gmail.com',	'',	'Silver',	NULL,	'$2y$10$khsvhvlRvacIj7/2XxbqBuhkJvkePSqQ.frgOyvZHkLkWJE5x9grG',	NULL,	'2019-03-27 11:58:53',	'2019-03-27 11:58:53'),
+(16,	2,	'Chandigarh SAllon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'chandigarhsallon@gmail.com',	'',	'Silver',	NULL,	'$2y$10$cAFqfSku8BIHxXyIj6wTp.ShiDpGvbu1P9VPoF0u9j1vShYHBQwWC',	NULL,	'2019-03-28 13:26:27',	'2019-03-28 13:26:27'),
+(20,	7,	'Sandeep',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix3@gmail.com',	'+919896747812',	'Silver',	NULL,	'$2y$10$uKd73tqiLpgceumTNURfdugTVhw4CBT9ZeUyrQROhrcWe1DekA5wa',	NULL,	'2019-04-04 13:08:30',	'2019-04-04 13:08:30'),
+(21,	7,	'Shikha',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test1@gmail.com',	'+919896747818',	'Silver',	NULL,	'$2y$10$flnRnfzbMoGaUNjTlmaXyuIghdELjiZfSb5EtJ/gk/HhzWi5eMpkO',	NULL,	'2019-04-05 04:47:04',	'2019-04-05 04:47:04'),
+(22,	7,	'Sandeep',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test2@gmail.com',	'7878787878',	'Silver',	NULL,	'$2y$10$reO0t.8sTAepXCVPnKy2n.cay1pGqPIE0ulA68.mqBmq0vGMvutb2',	NULL,	'2019-04-05 04:47:30',	'2019-04-05 04:47:30'),
+(23,	7,	'Davinder',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test3@gmail.com',	'9896747812',	'Silver',	NULL,	'$2y$10$qeR0el.P7LltOmLliBYVVu1tLv6fANg12BeQwIhuFhxSBWOdEZahm',	NULL,	'2019-04-05 04:47:55',	'2019-04-05 04:47:55'),
+(24,	7,	'Jyoti',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test4@gmail.com',	'6777676767',	'Silver',	NULL,	'$2y$10$R9aku7ZE3AYXfem3h.DSo.5BAGuQC8WgD5lyN7efwchI/MjkOahYO',	NULL,	'2019-04-05 04:48:21',	'2019-04-05 04:48:21'),
+(25,	7,	'Gurinder',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test5@gmail.com',	'9896747834',	'Silver',	NULL,	'$2y$10$pDn4nOI4C/TVLSDeFFWPROlFYvzDdn6wH0Nelkvq5SFcFEwfw6V.G',	NULL,	'2019-04-05 04:48:48',	'2019-04-05 04:48:48'),
+(26,	7,	'new user',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'new_appointment@gmail.com',	'343443343434',	'Silver',	NULL,	'$2y$10$XEj8hdZixzgB43Nsmo/zX.6k/FnmTtIP3o6mGzlyVCeIW6ei8YB92',	NULL,	'2019-04-05 08:00:01',	'2019-04-05 08:00:01'),
+(28,	2,	'Arya Sallon',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'aryasallon@gmail.com',	'',	'Silver',	NULL,	'$2y$10$dO4/5zST26d5EYCWExuD3OBceOGSq5UEFotgGfaMI4TXHyRalccn.',	NULL,	'2019-04-13 04:18:46',	'2019-04-13 04:18:46'),
+(29,	7,	'test first',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'sandeep.digittrix34@gmail.com',	'+8765269578',	'Silver',	NULL,	'$2y$10$y7FMLF3Ky28Dlq1EqVlJiuI17iF1P0UpVjUhdxJSnE9C13XfXx5Pu',	NULL,	'2019-04-13 09:53:50',	'2019-04-13 09:53:50'),
+(30,	7,	'test first',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test_hair@gmail.com',	'+6573482193',	'Silver',	NULL,	'$2y$10$iFjS9xPsCnHQRQAIMLWyZexM5EC8TM62RQnYUIY5RWzZAbkmjbgqG',	NULL,	'2019-04-13 10:23:57',	'2019-04-13 10:23:57'),
+(31,	7,	'test hair',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'test_hair_cut@gmail.com',	'+6573482194',	'Silver',	NULL,	'$2y$10$hA2/fxLJdnKJx4RwCAOwReN./oIY8Wcfl7K./YnJccw9/8t6fVagS',	NULL,	'2019-04-13 10:26:20',	'2019-04-13 10:26:20');
 
--- 2019-04-05 12:20:48
+-- 2019-04-13 12:20:15
